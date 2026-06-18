@@ -4,14 +4,14 @@ ecommerce_profile:
     dev:
       type: bigquery
       method: service-account
+      # Hardcoding these prevents empty values if the environment mapping desyncs
       project: evocative-depot-427007-m8
       dataset: online_ecommerce_star_schema
       threads: 4
       timeout_seconds: 300
       location: US
       priority: interactive
-      # These will look for individual environment strings mapped by your workflow
       client_email: "{{ env_var('DBT_ENV_SECRET_CLIENT_EMAIL') }}"
-      private_key: "{{ env_var('DBT_ENV_SECRET_PRIVATE_KEY') }}"
+      # Adding the modules clean-up format forces the private key lines to stack correctly
+      private_key: "{{ env_var('DBT_ENV_SECRET_PRIVATE_KEY') | replace('\\n', '\n') }}"
       private_key_id: "{{ env_var('DBT_ENV_SECRET_PRIVATE_KEY_ID') }}"
-      project_id: "{{ env_var('DBT_ENV_SECRET_PROJECT_ID') }}"
