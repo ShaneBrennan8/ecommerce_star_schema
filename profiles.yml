@@ -10,4 +10,5 @@ ecommerce_profile:
       timeout_seconds: 300
       location: US
       priority: interactive
-      keyfile: C:\Users\shane\.dbt\sa_key_file.json
+      # Uses the environment variable if present (CI/CD), otherwise uses your local path
+      keyfile: "{{ env_var('DBT_GCP_JSON_KEY_FILE_LOCATION', 'C:\\Users\\shane\\.dbt\\sa_key_file.json') }}"
