@@ -10,8 +10,6 @@ on:
 env:
   DBT_PROJECT_DIR: ./
   DBT_PROFILES_DIR: ./
-  # This environment variable matches the lookup key we put in profiles.yml above
-  DBT_GCP_JSON_KEY_FILE_LOCATION: /tmp/sa_key_file.json
 
 jobs:
   dbt_ci_cd:
@@ -31,15 +29,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install dbt-core==1.7.18 dbt-bigquery==1.7.9
 
-    - name: Set up Google Cloud authentication
-      env:
-        DBT_KEYFILE: ${{ secrets.DBT_GCP_JSON_KEY_FILE }}
-      run: |
-        echo "$DBT_KEYFILE" > /tmp/sa_key_file.json
-        # This properly saves the path globally for all upcoming steps
-        echo "GOOGLE_APPLICATION_CREDENTIALS=/tmp/sa_key_file.json" >> $GITHUB_ENV
-
     - name: Run dbt pipeline
+      env:
+        # Passes the secret string smoothly to the dbt env_var engine
+        DBT_GCP_JSON_KEY_FILE: ${{ secrets.DBT_GCP_JSON_KEY_FILE }}
       run: |
         dbt debug
         dbt deps
@@ -47,5 +40,7 @@ jobs:
         dbt run
 
     - name: Test dbt models
+      env:
+        DBT_GCP_JSON_KEY_FILE: ${{ secrets.DBT_GCP_JSON_KEY_FILE }}
       run: |
         dbt test
