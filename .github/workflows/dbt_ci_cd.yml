@@ -29,13 +29,11 @@ jobs:
         run: |
           dbt deps
 
-      - name: Authenticate GCP Service Account
-        env:
-          # This securely injects the secret cleanly as an environment variable
-          GCP_KEY_BASE64: ${{ secrets.DBT_ENV_SECRET_BQ_CREDENTIALS }}
+      - name: Parse and Export GCP Credentials
         run: |
-          # Bypasses 'echo' parsing bugs by decoding directly from the env variable memory block
-          echo "$GCP_KEY_BASE64" | base64 --decode > ./gcp_key.json
+          # Pulls fields dynamically from the raw JSON secret into the pipeline environment
+          echo "DBT_ENV_SECRET_PRIVATE_KEY=$(echo '${{ secrets.DBT_ENV_SECRET_BQ_CREDENTIALS }}' | jq -r '.private_key')" >> $GITHUB_ENV
+          echo "DBT_ENV_SECRET_CLIENT_EMAIL=$(echo '${{ secrets.DBT_ENV_SECRET_BQ_CREDENTIALS }}' | jq -r '.client_email')" >> $GITHUB_ENV
 
       - name: Run dbt Debug
         env:
