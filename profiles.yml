@@ -10,5 +10,5 @@ ecommerce_profile:
       timeout_seconds: 300
       location: US
       priority: interactive
-      # This tells dbt to parse the single raw JSON string natively
-      keyfile_json: "{{ env_var('DBT_ENV_SECRET_BQ_CREDENTIALS') }}"
+      # This replaces the literal '\n' text strings with real code linebreaks
+      keyfile_json: "{{ env_var('DBT_ENV_SECRET_BQ_CREDENTIALS') | replace('\\n', '\n') }}"
