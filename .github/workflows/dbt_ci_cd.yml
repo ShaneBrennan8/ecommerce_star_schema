@@ -31,17 +31,25 @@ jobs:
 
       - name: Run dbt debug
         env:
-          # Inject the raw secret directly into a single dedicated environment variable
-          DBT_RAW_GCP_JSON: ${{ secrets.DBT_ENV_SECRET_BQ_CREDENTIALS }}
+          DBT_ENV_SECRET_PROJECT_ID: ${{ secrets.DBT_ENV_SECRET_PROJECT_ID }}
+          DBT_ENV_SECRET_CLIENT_EMAIL: ${{ secrets.DBT_ENV_SECRET_CLIENT_EMAIL }}
+          DBT_ENV_SECRET_PRIVATE_KEY_ID: ${{ secrets.DBT_ENV_SECRET_PRIVATE_KEY_ID }}
+          DBT_ENV_SECRET_PRIVATE_KEY: ${{ secrets.DBT_ENV_SECRET_PRIVATE_KEY }}
         run: |
           dbt debug
 
       - name: Run dbt Models
         env:
-          DBT_ENV_SECRET_BQ_CREDENTIALS: ${{ secrets.DBT_ENV_SECRET_BQ_CREDENTIALS }}
+          DBT_ENV_SECRET_PROJECT_ID: ${{ secrets.DBT_ENV_SECRET_PROJECT_ID }}
+          DBT_ENV_SECRET_CLIENT_EMAIL: ${{ secrets.DBT_ENV_SECRET_CLIENT_EMAIL }}
+          DBT_ENV_SECRET_PRIVATE_KEY_ID: ${{ secrets.DBT_ENV_SECRET_PRIVATE_KEY_ID }}
+          DBT_ENV_SECRET_PRIVATE_KEY: ${{ secrets.DBT_ENV_SECRET_PRIVATE_KEY }}
         run: dbt run --profiles-dir .
 
       - name: Test dbt Models
         env:
-          DBT_ENV_SECRET_BQ_CREDENTIALS: ${{ secrets.DBT_ENV_SECRET_BQ_CREDENTIALS }}
+          DBT_ENV_SECRET_PROJECT_ID: ${{ secrets.DBT_ENV_SECRET_PROJECT_ID }}
+          DBT_ENV_SECRET_CLIENT_EMAIL: ${{ secrets.DBT_ENV_SECRET_CLIENT_EMAIL }}
+          DBT_ENV_SECRET_PRIVATE_KEY_ID: ${{ secrets.DBT_ENV_SECRET_PRIVATE_KEY_ID }}
+          DBT_ENV_SECRET_PRIVATE_KEY: ${{ secrets.DBT_ENV_SECRET_PRIVATE_KEY }}
         run: dbt test --profiles-dir .
