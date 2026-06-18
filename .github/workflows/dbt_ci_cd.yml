@@ -29,27 +29,20 @@ jobs:
         run: |
           dbt deps
 
-      - name: Run dbt debug
+      - name: Run dbt pipeline
         env:
           DBT_ENV_SECRET_PROJECT_ID: ${{ secrets.DBT_ENV_SECRET_PROJECT_ID }}
           DBT_ENV_SECRET_CLIENT_EMAIL: ${{ secrets.DBT_ENV_SECRET_CLIENT_EMAIL }}
-          DBT_ENV_SECRET_PRIVATE_KEY_ID: ${{ secrets.DBT_ENV_SECRET_PRIVATE_KEY_ID }}
           DBT_ENV_SECRET_PRIVATE_KEY: ${{ secrets.DBT_ENV_SECRET_PRIVATE_KEY }}
         run: |
+          # Safely dump the multiline key directly to a file on the runner
+          echo "$DBT_ENV_SECRET_PRIVATE_KEY" > ./bq_private_key.pem
+          
+          echo "=== Running Debug ==="
           dbt debug --profiles-dir . --target dev
-
-      - name: Run dbt Models
-        env:
-          DBT_ENV_SECRET_PROJECT_ID: ${{ secrets.DBT_ENV_SECRET_PROJECT_ID }}
-          DBT_ENV_SECRET_CLIENT_EMAIL: ${{ secrets.DBT_ENV_SECRET_CLIENT_EMAIL }}
-          DBT_ENV_SECRET_PRIVATE_KEY_ID: ${{ secrets.DBT_ENV_SECRET_PRIVATE_KEY_ID }}
-          DBT_ENV_SECRET_PRIVATE_KEY: ${{ secrets.DBT_ENV_SECRET_PRIVATE_KEY }}
-        run: dbt run --profiles-dir .
-
-      - name: Test dbt Models
-        env:
-          DBT_ENV_SECRET_PROJECT_ID: ${{ secrets.DBT_ENV_SECRET_PROJECT_ID }}
-          DBT_ENV_SECRET_CLIENT_EMAIL: ${{ secrets.DBT_ENV_SECRET_CLIENT_EMAIL }}
-          DBT_ENV_SECRET_PRIVATE_KEY_ID: ${{ secrets.DBT_ENV_SECRET_PRIVATE_KEY_ID }}
-          DBT_ENV_SECRET_PRIVATE_KEY: ${{ secrets.DBT_ENV_SECRET_PRIVATE_KEY }}
-        run: dbt test --profiles-dir .
+          
+          echo "=== Running Models ==="
+          dbt run --profiles-dir . --target dev
+          
+          echo "=== Running Tests ==="
+          dbt test --profiles-dir . --target dev

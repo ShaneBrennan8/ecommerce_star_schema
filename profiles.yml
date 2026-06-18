@@ -11,6 +11,9 @@ ecommerce_profile:
       location: US
       priority: interactive
       client_email: "{{ env_var('DBT_ENV_SECRET_CLIENT_EMAIL') }}"
-      private_key: "{{ env_var('DBT_ENV_SECRET_PRIVATE_KEY') | replace('\\n', '\n') }}"
-      private_key_id: "{{ env_var('DBT_ENV_SECRET_PRIVATE_KEY_ID') }}"
-      project_id: evocative-depot-427007-m8
+      # Point directly to the file created by the runner
+      keyfile_json:
+        type: "service_account"
+        project_id: "evocative-depot-427007-m8"
+        client_email: "{{ env_var('DBT_ENV_SECRET_CLIENT_EMAIL') }}"
+        private_key_path: "./bq_private_key.pem"
