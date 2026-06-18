@@ -10,4 +10,4 @@ ecommerce_profile:
       timeout_seconds: 300
       location: US
       # Adding | as_native forces dbt to handle the JSON string completely natively
-      keyfile_json: "{{ env_var('DBT_ENV_SECRET_BQ_CREDENTIALS') | as_native }}"
+      keyfile_json: "./gcp_key.json"

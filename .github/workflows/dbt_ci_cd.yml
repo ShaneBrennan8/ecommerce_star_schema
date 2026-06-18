@@ -29,6 +29,10 @@ jobs:
         run: |
           dbt deps
 
+      - name: Authenticate GCP Service Account
+        run: |
+          echo "${{ secrets.DBT_ENV_SECRET_BQ_CREDENTIALS }}" | base64 --decode > ./gcp_key.json
+
       - name: Run dbt Debug
         env:
           DBT_ENV_SECRET_BQ_CREDENTIALS: ${{ secrets.DBT_ENV_SECRET_BQ_CREDENTIALS }}
