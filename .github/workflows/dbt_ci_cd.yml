@@ -29,16 +29,12 @@ jobs:
         run: |
           dbt deps
 
-      - name: Parse and Export GCP Credentials
-        run: |
-          # Pulls fields dynamically from the raw JSON secret into the pipeline environment
-          echo "DBT_ENV_SECRET_PRIVATE_KEY=$(echo '${{ secrets.DBT_ENV_SECRET_BQ_CREDENTIALS }}' | jq -r '.private_key')" >> $GITHUB_ENV
-          echo "DBT_ENV_SECRET_CLIENT_EMAIL=$(echo '${{ secrets.DBT_ENV_SECRET_BQ_CREDENTIALS }}' | jq -r '.client_email')" >> $GITHUB_ENV
-
-      - name: Run dbt Debug
+      - name: Run dbt debug
         env:
-          DBT_ENV_SECRET_BQ_CREDENTIALS: ${{ secrets.DBT_ENV_SECRET_BQ_CREDENTIALS }}
-        run: dbt debug
+          # Inject the raw secret directly into a single dedicated environment variable
+          DBT_RAW_GCP_JSON: ${{ secrets.DBT_ENV_SECRET_BQ_CREDENTIALS }}
+        run: |
+          dbt debug
 
       - name: Run dbt Models
         env:
