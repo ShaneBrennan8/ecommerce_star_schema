@@ -13,3 +13,4 @@ ecommerce_profile:
       client_email: "{{ env_var('DBT_ENV_SECRET_CLIENT_EMAIL') }}"
       private_key: "{{ env_var('DBT_ENV_SECRET_PRIVATE_KEY') | replace('\\n', '\n') }}"
       private_key_id: "{{ env_var('DBT_ENV_SECRET_PRIVATE_KEY_ID') }}"
+      project_id: evocative-depot-427007-m8

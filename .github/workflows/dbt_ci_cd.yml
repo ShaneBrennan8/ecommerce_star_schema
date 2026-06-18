@@ -36,7 +36,7 @@ jobs:
           DBT_ENV_SECRET_PRIVATE_KEY_ID: ${{ secrets.DBT_ENV_SECRET_PRIVATE_KEY_ID }}
           DBT_ENV_SECRET_PRIVATE_KEY: ${{ secrets.DBT_ENV_SECRET_PRIVATE_KEY }}
         run: |
-          dbt debug
+          dbt debug --profiles-dir . --target dev
 
       - name: Run dbt Models
         env:
