@@ -10,4 +10,4 @@ ecommerce_profile:
       timeout_seconds: 300
       location: US
       # Adding | as_native forces dbt to handle the JSON string completely natively
-      keyfile_json: "./gcp_key.json"
+      keyfile: "./gcp_key.json"
