@@ -10,7 +10,7 @@ on:
 
 jobs:
   run_dbt:
-    runs-rate: ubuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Code

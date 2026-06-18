@@ -30,3 +30,7 @@ join orders o on oi.order_id = o.order_id
   -- This filter will balance performance down the line when converted to incremental
   where o.order_date > (select max(order_date) from {{ this }})
 {% endif %}
+
+
+--##Note: To shift from full table replacement to append-only in the future, 
+--##simply change materialized='table' to materialized='incremental' and add incremental_strategy='append' to the config block.
