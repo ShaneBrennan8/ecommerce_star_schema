@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: bq_raw
+    database: evocative-depot-427007-m8
+    schema: online_ecommerce_star_schema
+    tables:
+      - name: raw_customers
+      - name: raw_orders
+      - name: raw_order_items
+      - name: raw_products
+      - name: raw_reviews
+      - name: raw_events
+      - name: raw_sessions

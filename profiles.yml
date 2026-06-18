@@ -1,0 +1,12 @@
+ecommerce_profile:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account-json
+      project: evocative-depot-427007-m8
+      dataset: online_ecommerce_star_schema
+      threads: 4
+      timeout_seconds: 300
+      location: US # Update if your dataset is in a specific region like EU
+      keyfile_json: "{{ env_var('DBT_ENV_SECRET_BQ_CREDENTIALS') }}"
