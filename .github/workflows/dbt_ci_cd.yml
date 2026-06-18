@@ -29,33 +29,18 @@ jobs:
         run: |
           dbt deps
 
-      - name: Run dbt pipeline
+      - name: Run dbt debug
         env:
-          DBT_ENV_SECRET_PROJECT_ID: ${{ secrets.DBT_ENV_SECRET_PROJECT_ID }}
-          DBT_ENV_SECRET_CLIENT_EMAIL: ${{ secrets.DBT_ENV_SECRET_CLIENT_EMAIL }}
-          DBT_ENV_SECRET_PRIVATE_KEY_ID: ${{ secrets.DBT_ENV_SECRET_PRIVATE_KEY_ID }}
-          DBT_ENV_SECRET_PRIVATE_KEY: ${{ secrets.DBT_ENV_SECRET_PRIVATE_KEY }}
+          DBT_ENV_SECRET_BQ_CREDENTIALS: ${{ secrets.DBT_ENV_SECRET_BQ_CREDENTIALS }}
         run: |
-          # 1. Reconstruct a perfect service account JSON key file
-          cat << EOF > ./gcp_key.json
-          {
-            "type": "service_account",
-            "project_id": "$DBT_ENV_SECRET_PROJECT_ID",
-            "private_key_id": "$DBT_ENV_SECRET_PRIVATE_KEY_ID",
-            "private_key": "$DBT_ENV_SECRET_PRIVATE_KEY",
-            "client_email": "$DBT_ENV_SECRET_CLIENT_EMAIL",
-            "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-            "token_uri": "https://oauth2.googleapis.com/token",
-            "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-            "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/$(echo $DBT_ENV_SECRET_CLIENT_EMAIL | sed 's/@/%40/g')"
-          }
-          EOF
-          
-          echo "=== Running Debug ==="
           dbt debug --profiles-dir . --target dev
-          
-          echo "=== Running Models ==="
-          dbt run --profiles-dir . --target dev
-          
-          echo "=== Running Tests ==="
-          dbt test --profiles-dir . --target dev
+
+      - name: Run dbt Models
+        env:
+          DBT_ENV_SECRET_BQ_CREDENTIALS: ${{ secrets.DBT_ENV_SECRET_BQ_CREDENTIALS }}
+        run: dbt run --profiles-dir . --target dev
+
+      - name: Test dbt Models
+        env:
+          DBT_ENV_SECRET_BQ_CREDENTIALS: ${{ secrets.DBT_ENV_SECRET_BQ_CREDENTIALS }}
+        run: dbt test --profiles-dir . --target dev
