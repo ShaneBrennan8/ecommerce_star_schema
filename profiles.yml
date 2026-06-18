@@ -6,9 +6,8 @@ ecommerce_profile:
       method: service-account
       project: evocative-depot-427007-m8
       dataset: online_ecommerce_star_schema
-      threads: 4
+      threads: 1
       timeout_seconds: 300
       location: US
       priority: interactive
-      # This replaces the literal '\n' text strings with real code linebreaks
-      keyfile_json: "{{ env_var('DBT_ENV_SECRET_BQ_CREDENTIALS') | replace('\\n', '\n') }}"
+      keyfile: C:\Users\shane\.dbt\sa_key_file.json
