@@ -31,7 +31,8 @@ jobs:
 
       - name: Authenticate GCP Service Account
         run: |
-          echo "${{ secrets.DBT_ENV_SECRET_BQ_CREDENTIALS }}" | base64 --decode > ./gcp_key.json
+          # The -n flag guarantees a clean payload with no trailing formatting bytes
+          echo -n "${{ secrets.DBT_ENV_SECRET_BQ_CREDENTIALS }}" | base64 --decode > ./gcp_key.json
 
       - name: Run dbt Debug
         env:
