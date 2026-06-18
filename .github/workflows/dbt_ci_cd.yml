@@ -1,46 +1,51 @@
-name: dbt Core CI/CD Pipeline
+name: dbt_ci_cd
 
 on:
   push:
     branches:
       - main
   pull_request:
-    branches:
-      - main
+    branches: [ main ]
+
+env:
+  DBT_PROJECT_DIR: ./
+  DBT_PROFILES_DIR: ./
+  # This environment variable matches the lookup key we put in profiles.yml above
+  DBT_GCP_JSON_KEY_FILE_LOCATION: /tmp/sa_key_file.json
 
 jobs:
-  run_dbt:
+  dbt_ci_cd:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9.x'
 
-      - name: Install dependencies
-        run: |
-          pip install dbt-bigquery
+    - name: Install dbt
+      run: |
+        python -m pip install --upgrade pip
+        pip install dbt-core==1.7.18 dbt-bigquery==1.7.9
 
-      - name: Install dbt packages
-        run: |
-          dbt deps
+    - name: Set up Google Cloud authentication
+      env:
+        DBT_KEYFILE: ${{ secrets.DBT_GCP_JSON_KEY_FILE }}
+      run: |
+        echo "$DBT_KEYFILE" > /tmp/sa_key_file.json
+        # This properly saves the path globally for all upcoming steps
+        echo "GOOGLE_APPLICATION_CREDENTIALS=/tmp/sa_key_file.json" >> $GITHUB_ENV
 
-      - name: Run dbt debug
-        env:
-          DBT_ENV_SECRET_BQ_CREDENTIALS: ${{ secrets.DBT_ENV_SECRET_BQ_CREDENTIALS }}
-        run: |
-          dbt debug --profiles-dir . --target dev
+    - name: Run dbt pipeline
+      run: |
+        dbt debug
+        dbt deps
+        dbt seed
+        dbt run
 
-      - name: Run dbt Models
-        env:
-          DBT_ENV_SECRET_BQ_CREDENTIALS: ${{ secrets.DBT_ENV_SECRET_BQ_CREDENTIALS }}
-        run: dbt run --profiles-dir . --target dev
-
-      - name: Test dbt Models
-        env:
-          DBT_ENV_SECRET_BQ_CREDENTIALS: ${{ secrets.DBT_ENV_SECRET_BQ_CREDENTIALS }}
-        run: dbt test --profiles-dir . --target dev
+    - name: Test dbt models
+      run: |
+        dbt test

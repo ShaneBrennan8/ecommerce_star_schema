@@ -7,4 +7,4 @@ select
     cast(order_date as timestamp) as order_date,
     cast(order_status as string) as order_status,
     cast(total_amount as numeric) as total_amount
-from source
+from source 
