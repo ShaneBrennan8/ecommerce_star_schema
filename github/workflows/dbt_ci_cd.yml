@@ -1,0 +1,45 @@
+name: dbt Core CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run_dbt:
+    runs-rate: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install dbt-bigquery
+
+      - name: Install dbt packages
+        run: |
+          dbt deps
+
+      - name: Run dbt Debug
+        env:
+          DBT_ENV_SECRET_BQ_CREDENTIALS: ${{ secrets.DBT_ENV_SECRET_BQ_CREDENTIALS }}
+        run: dbt debug
+
+      - name: Run dbt Models
+        env:
+          DBT_ENV_SECRET_BQ_CREDENTIALS: ${{ secrets.DBT_ENV_SECRET_BQ_CREDENTIALS }}
+        run: dbt run --profiles-dir .
+
+      - name: Test dbt Models
+        env:
+          DBT_ENV_SECRET_BQ_CREDENTIALS: ${{ secrets.DBT_ENV_SECRET_BQ_CREDENTIALS }}
+        run: dbt test --profiles-dir .
