@@ -6,8 +6,6 @@ ecommerce_profile:
       method: service-account-json
       project: evocative-depot-427007-m8
       dataset: online_ecommerce_star_schema
-      threads: 4
-      timeout_seconds: 300
-      location: US
-      # Adding | as_native forces dbt to handle the JSON string completely natively
-      keyfile: "./gcp_key.json"
+      threads: 1
+      # dbt will read the entire JSON layout straight out of memory
+      keyfile_json: "{{ env_var('DBT_RAW_GCP_JSON') }}"
