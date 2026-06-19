@@ -23,4 +23,4 @@ shane_bigquery_project:
       timeout_seconds: 300
       location: US
       priority: interactive
-      keyfile_json: '{{ env_var("DBT_GCP_JSON_KEY_FILE") }}'
+      keyfile_json: '{{ env_var(''DBT_GCP_JSON_KEY_FILE'', ''...'') }}'

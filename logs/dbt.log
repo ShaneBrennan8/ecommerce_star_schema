@@ -2858,3 +2858,382 @@ from `evocative-depot-427007-m8`.`online_ecommerce_star_schema`.`stg_customers`
 [0m20:43:54.981618 [debug] [MainThread]: Command `dbt run` failed at 20:43:54.981618 after 35.90 seconds
 [0m20:43:54.982614 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FB24870680>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FB24981A90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FB24981970>]}
 [0m20:43:54.983670 [debug] [MainThread]: Flushing usage events
+[0m21:06:22.262684 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A00FD74410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A00FDD6E40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A00FEB1610>]}
+
+
+============================== 21:06:22.267712 | da81c1b4-38e0-43e5-ab9d-064625528d9b ==============================
+[0m21:06:22.267712 [info ] [MainThread]: Running with dbt=1.7.18
+[0m21:06:22.267712 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\shane\\OneDrive\\Documents\\GitHub\\online_ecommerce_star_schema', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\shane\\OneDrive\\Documents\\GitHub\\online_ecommerce_star_schema\\logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:06:23.627735 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'da81c1b4-38e0-43e5-ab9d-064625528d9b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A00FED3C50>]}
+[0m21:06:23.697936 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'da81c1b4-38e0-43e5-ab9d-064625528d9b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A0227FE570>]}
+[0m21:06:23.697936 [info ] [MainThread]: Registered adapter: bigquery=1.7.9
+[0m21:06:23.717828 [debug] [MainThread]: checksum: 7ef98830ab3f0215d011ffa635e2417c6313d5b77f40f33d534bad4eb8784f08, vars: {}, profile: , target: , version: 1.7.18
+[0m21:06:23.808304 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m21:06:23.808304 [debug] [MainThread]: Partial parsing: updated file: online_ecommerce_star_schema://models\staging\stg_customers.sql
+[0m21:06:24.028893 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'da81c1b4-38e0-43e5-ab9d-064625528d9b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A022863A10>]}
+[0m21:06:24.042820 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'da81c1b4-38e0-43e5-ab9d-064625528d9b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A022956270>]}
+[0m21:06:24.043816 [info ] [MainThread]: Found 10 models, 7 sources, 0 exposures, 0 metrics, 454 macros, 0 groups, 0 semantic models
+[0m21:06:24.044813 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'da81c1b4-38e0-43e5-ab9d-064625528d9b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A022ABE9C0>]}
+[0m21:06:24.048803 [info ] [MainThread]: 
+[0m21:06:24.050806 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m21:06:24.052791 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_evocative-depot-427007-m8'
+[0m21:06:24.052791 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:06:25.878282 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_evocative-depot-427007-m8_online_ecommerce_star_schema'
+[0m21:06:25.878282 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:06:27.378436 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'da81c1b4-38e0-43e5-ab9d-064625528d9b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A022ABEF90>]}
+[0m21:06:27.378436 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:06:27.378436 [info ] [MainThread]: 
+[0m21:06:27.387996 [debug] [Thread-3 (]: Began running node model.online_ecommerce_star_schema.stg_customers
+[0m21:06:27.387996 [info ] [Thread-3 (]: 1 of 10 START sql view model online_ecommerce_star_schema.stg_customers ........ [RUN]
+[0m21:06:27.391677 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.online_ecommerce_star_schema.stg_customers'
+[0m21:06:27.392678 [debug] [Thread-3 (]: Began compiling node model.online_ecommerce_star_schema.stg_customers
+[0m21:06:27.398012 [debug] [Thread-3 (]: Writing injected SQL for node "model.online_ecommerce_star_schema.stg_customers"
+[0m21:06:27.398012 [debug] [Thread-3 (]: Timing info for model.online_ecommerce_star_schema.stg_customers (compile): 21:06:27.393045 => 21:06:27.398012
+[0m21:06:27.398012 [debug] [Thread-3 (]: Began executing node model.online_ecommerce_star_schema.stg_customers
+[0m21:06:27.439729 [debug] [Thread-3 (]: Writing runtime sql for node "model.online_ecommerce_star_schema.stg_customers"
+[0m21:06:27.440762 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m21:06:27.475962 [debug] [Thread-3 (]: On model.online_ecommerce_star_schema.stg_customers: /* {"app": "dbt", "dbt_version": "1.7.18", "profile_name": "shane_bigquery_project", "target_name": "dev", "node_id": "model.online_ecommerce_star_schema.stg_customers"} */
+
+
+  create or replace view `evocative-depot-427007-m8`.`online_ecommerce_star_schema`.`stg_customers`
+  OPTIONS()
+  as with source as (
+    select * from `evocative-depot-427007-m8`.`online_ecommerce_star_schema`.`raw_customers`
+)
+
+select
+    cast(customer_id as string) as customer_id,
+    cast(name as string) as customer_name, -- Mapped from name
+    cast(email as string) as email,
+    cast(signup_date as timestamp) as signup_date,
+    cast(country as string) as country
+from source 
+
+--temp comment just so I can push;
+
+
+[0m21:06:29.338017 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:88194e5b-8622-46ad-a274-6044f2d0983c&page=queryresults
+[0m21:06:30.203066 [debug] [Thread-3 (]: Timing info for model.online_ecommerce_star_schema.stg_customers (execute): 21:06:27.398012 => 21:06:30.203066
+[0m21:06:30.203066 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'da81c1b4-38e0-43e5-ab9d-064625528d9b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A0229A7470>]}
+[0m21:06:30.208186 [info ] [Thread-3 (]: 1 of 10 OK created sql view model online_ecommerce_star_schema.stg_customers ... [[32mCREATE VIEW (0 processed)[0m in 2.82s]
+[0m21:06:30.208186 [debug] [Thread-3 (]: Finished running node model.online_ecommerce_star_schema.stg_customers
+[0m21:06:30.208186 [debug] [Thread-3 (]: Began running node model.online_ecommerce_star_schema.stg_events
+[0m21:06:30.208186 [info ] [Thread-3 (]: 2 of 10 START sql view model online_ecommerce_star_schema.stg_events ........... [RUN]
+[0m21:06:30.208186 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.online_ecommerce_star_schema.stg_customers, now model.online_ecommerce_star_schema.stg_events)
+[0m21:06:30.208186 [debug] [Thread-3 (]: Began compiling node model.online_ecommerce_star_schema.stg_events
+[0m21:06:30.208186 [debug] [Thread-3 (]: Writing injected SQL for node "model.online_ecommerce_star_schema.stg_events"
+[0m21:06:30.208186 [debug] [Thread-3 (]: Timing info for model.online_ecommerce_star_schema.stg_events (compile): 21:06:30.208186 => 21:06:30.208186
+[0m21:06:30.208186 [debug] [Thread-3 (]: Began executing node model.online_ecommerce_star_schema.stg_events
+[0m21:06:30.221367 [debug] [Thread-3 (]: Writing runtime sql for node "model.online_ecommerce_star_schema.stg_events"
+[0m21:06:30.222643 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m21:06:30.257000 [debug] [Thread-3 (]: On model.online_ecommerce_star_schema.stg_events: /* {"app": "dbt", "dbt_version": "1.7.18", "profile_name": "shane_bigquery_project", "target_name": "dev", "node_id": "model.online_ecommerce_star_schema.stg_events"} */
+
+
+  create or replace view `evocative-depot-427007-m8`.`online_ecommerce_star_schema`.`stg_events`
+  OPTIONS()
+  as with source as (
+    select * from `evocative-depot-427007-m8`.`online_ecommerce_star_schema`.`raw_events`
+)
+
+select
+    cast(event_id as string) as event_id,
+    cast(session_id as string) as session_id,
+    cast(user_id as string) as customer_id, -- Mapped from user_id
+    cast(event_type as string) as event_type,
+    cast(event_timestamp as timestamp) as event_timestamp,
+    cast(page_url as string) as page_url
+from source;
+
+
+[0m21:06:32.328186 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:08902962-2676-4ac9-97ac-c03081ab05db&page=queryresults
+[0m21:06:32.675250 [debug] [Thread-3 (]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Unrecognized name: user_id at [13:10]; reason: invalidQuery, location: query, message: Unrecognized name: user_id at [13:10]')
+[0m21:06:33.818121 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:3eb16a5f-cc6c-453f-96aa-6ee1bdb750a1&page=queryresults
+[0m21:06:34.171933 [error] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:3eb16a5f-cc6c-453f-96aa-6ee1bdb750a1&page=queryresults
+[0m21:06:34.177986 [debug] [Thread-3 (]: Timing info for model.online_ecommerce_star_schema.stg_events (execute): 21:06:30.208186 => 21:06:34.171933
+[0m21:06:34.180532 [debug] [Thread-3 (]: Database Error in model stg_events (models\staging\stg_events.sql)
+  Unrecognized name: user_id at [13:10]
+  compiled Code at target\run\online_ecommerce_star_schema\models\staging\stg_events.sql
+[0m21:06:34.186197 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'da81c1b4-38e0-43e5-ab9d-064625528d9b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A022B88B30>]}
+[0m21:06:34.188195 [error] [Thread-3 (]: 2 of 10 ERROR creating sql view model online_ecommerce_star_schema.stg_events .. [[31mERROR[0m in 3.98s]
+[0m21:06:34.191373 [debug] [Thread-3 (]: Finished running node model.online_ecommerce_star_schema.stg_events
+[0m21:06:34.193284 [debug] [Thread-3 (]: Began running node model.online_ecommerce_star_schema.stg_order_items
+[0m21:06:34.193284 [info ] [Thread-3 (]: 3 of 10 START sql view model online_ecommerce_star_schema.stg_order_items ...... [RUN]
+[0m21:06:34.197224 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.online_ecommerce_star_schema.stg_events, now model.online_ecommerce_star_schema.stg_order_items)
+[0m21:06:34.197740 [debug] [Thread-3 (]: Began compiling node model.online_ecommerce_star_schema.stg_order_items
+[0m21:06:34.201755 [debug] [Thread-3 (]: Writing injected SQL for node "model.online_ecommerce_star_schema.stg_order_items"
+[0m21:06:34.202751 [debug] [Thread-3 (]: Timing info for model.online_ecommerce_star_schema.stg_order_items (compile): 21:06:34.198752 => 21:06:34.202751
+[0m21:06:34.205044 [debug] [Thread-3 (]: Began executing node model.online_ecommerce_star_schema.stg_order_items
+[0m21:06:34.208620 [debug] [Thread-3 (]: Writing runtime sql for node "model.online_ecommerce_star_schema.stg_order_items"
+[0m21:06:34.208620 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m21:06:34.254140 [debug] [Thread-3 (]: On model.online_ecommerce_star_schema.stg_order_items: /* {"app": "dbt", "dbt_version": "1.7.18", "profile_name": "shane_bigquery_project", "target_name": "dev", "node_id": "model.online_ecommerce_star_schema.stg_order_items"} */
+
+
+  create or replace view `evocative-depot-427007-m8`.`online_ecommerce_star_schema`.`stg_order_items`
+  OPTIONS()
+  as with source as (
+    select * from `evocative-depot-427007-m8`.`online_ecommerce_star_schema`.`raw_order_items`
+)
+
+select
+    generate_uuid() as order_item_id, -- Generates a clean key if missing
+    cast(order_id as string) as order_id,
+    cast(product_id as string) as product_id,
+    cast(quantity as int64) as quantity,
+    cast(price as numeric) as price
+from source;
+
+
+[0m21:06:36.337943 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:f44d5f6f-9f90-4ff9-9512-4eed7fba6423&page=queryresults
+[0m21:06:36.709093 [debug] [Thread-3 (]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Unrecognized name: price at [15:10]; reason: invalidQuery, location: query, message: Unrecognized name: price at [15:10]')
+[0m21:06:38.022987 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:0d861dae-364c-43f5-ac9c-89d4b39cea0c&page=queryresults
+[0m21:06:38.413285 [error] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:0d861dae-364c-43f5-ac9c-89d4b39cea0c&page=queryresults
+[0m21:06:38.414321 [debug] [Thread-3 (]: Timing info for model.online_ecommerce_star_schema.stg_order_items (execute): 21:06:34.207029 => 21:06:38.414321
+[0m21:06:38.418155 [debug] [Thread-3 (]: Database Error in model stg_order_items (models\staging\stg_order_items.sql)
+  Unrecognized name: price at [15:10]
+  compiled Code at target\run\online_ecommerce_star_schema\models\staging\stg_order_items.sql
+[0m21:06:38.418155 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'da81c1b4-38e0-43e5-ab9d-064625528d9b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A0228FF2F0>]}
+[0m21:06:38.418155 [error] [Thread-3 (]: 3 of 10 ERROR creating sql view model online_ecommerce_star_schema.stg_order_items  [[31mERROR[0m in 4.22s]
+[0m21:06:38.418155 [debug] [Thread-3 (]: Finished running node model.online_ecommerce_star_schema.stg_order_items
+[0m21:06:38.420367 [debug] [Thread-3 (]: Began running node model.online_ecommerce_star_schema.stg_orders
+[0m21:06:38.421346 [info ] [Thread-3 (]: 4 of 10 START sql view model online_ecommerce_star_schema.stg_orders ........... [RUN]
+[0m21:06:38.421346 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.online_ecommerce_star_schema.stg_order_items, now model.online_ecommerce_star_schema.stg_orders)
+[0m21:06:38.421346 [debug] [Thread-3 (]: Began compiling node model.online_ecommerce_star_schema.stg_orders
+[0m21:06:38.427020 [debug] [Thread-3 (]: Writing injected SQL for node "model.online_ecommerce_star_schema.stg_orders"
+[0m21:06:38.427965 [debug] [Thread-3 (]: Timing info for model.online_ecommerce_star_schema.stg_orders (compile): 21:06:38.421346 => 21:06:38.427965
+[0m21:06:38.427965 [debug] [Thread-3 (]: Began executing node model.online_ecommerce_star_schema.stg_orders
+[0m21:06:38.427965 [debug] [Thread-3 (]: Writing runtime sql for node "model.online_ecommerce_star_schema.stg_orders"
+[0m21:06:38.434990 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m21:06:38.468616 [debug] [Thread-3 (]: On model.online_ecommerce_star_schema.stg_orders: /* {"app": "dbt", "dbt_version": "1.7.18", "profile_name": "shane_bigquery_project", "target_name": "dev", "node_id": "model.online_ecommerce_star_schema.stg_orders"} */
+
+
+  create or replace view `evocative-depot-427007-m8`.`online_ecommerce_star_schema`.`stg_orders`
+  OPTIONS()
+  as with source as (
+    select * from `evocative-depot-427007-m8`.`online_ecommerce_star_schema`.`raw_orders`
+)
+
+select
+    cast(order_id as string) as order_id,
+    cast(customer_id as string) as customer_id,
+    cast(order_time as timestamp) as order_date, -- Mapped from order_time
+    cast(order_status as string) as order_status,
+    cast(total_amount as numeric) as total_amount
+from source;
+
+
+[0m21:06:40.497875 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:f362aba6-e0f7-425d-aea0-428ab8856220&page=queryresults
+[0m21:06:40.838585 [debug] [Thread-3 (]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Unrecognized name: order_status at [14:10]; reason: invalidQuery, location: query, message: Unrecognized name: order_status at [14:10]')
+[0m21:06:41.949796 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:5f2348fe-4084-4de3-af4f-2ccd3cf56bfa&page=queryresults
+[0m21:06:42.319743 [error] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:5f2348fe-4084-4de3-af4f-2ccd3cf56bfa&page=queryresults
+[0m21:06:42.328049 [debug] [Thread-3 (]: Timing info for model.online_ecommerce_star_schema.stg_orders (execute): 21:06:38.427965 => 21:06:42.328049
+[0m21:06:42.333229 [debug] [Thread-3 (]: Database Error in model stg_orders (models\staging\stg_orders.sql)
+  Unrecognized name: order_status at [14:10]
+  compiled Code at target\run\online_ecommerce_star_schema\models\staging\stg_orders.sql
+[0m21:06:42.335477 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'da81c1b4-38e0-43e5-ab9d-064625528d9b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A02277B740>]}
+[0m21:06:42.340446 [error] [Thread-3 (]: 4 of 10 ERROR creating sql view model online_ecommerce_star_schema.stg_orders .. [[31mERROR[0m in 3.91s]
+[0m21:06:42.342253 [debug] [Thread-3 (]: Finished running node model.online_ecommerce_star_schema.stg_orders
+[0m21:06:42.342253 [debug] [Thread-3 (]: Began running node model.online_ecommerce_star_schema.stg_products
+[0m21:06:42.347779 [info ] [Thread-3 (]: 5 of 10 START sql view model online_ecommerce_star_schema.stg_products ......... [RUN]
+[0m21:06:42.350843 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.online_ecommerce_star_schema.stg_orders, now model.online_ecommerce_star_schema.stg_products)
+[0m21:06:42.352835 [debug] [Thread-3 (]: Began compiling node model.online_ecommerce_star_schema.stg_products
+[0m21:06:42.380756 [debug] [Thread-3 (]: Writing injected SQL for node "model.online_ecommerce_star_schema.stg_products"
+[0m21:06:42.382218 [debug] [Thread-3 (]: Timing info for model.online_ecommerce_star_schema.stg_products (compile): 21:06:42.353833 => 21:06:42.382218
+[0m21:06:42.384214 [debug] [Thread-3 (]: Began executing node model.online_ecommerce_star_schema.stg_products
+[0m21:06:42.390197 [debug] [Thread-3 (]: Writing runtime sql for node "model.online_ecommerce_star_schema.stg_products"
+[0m21:06:42.392192 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m21:06:42.451758 [debug] [Thread-3 (]: On model.online_ecommerce_star_schema.stg_products: /* {"app": "dbt", "dbt_version": "1.7.18", "profile_name": "shane_bigquery_project", "target_name": "dev", "node_id": "model.online_ecommerce_star_schema.stg_products"} */
+
+
+  create or replace view `evocative-depot-427007-m8`.`online_ecommerce_star_schema`.`stg_products`
+  OPTIONS()
+  as with source as (
+    select * from `evocative-depot-427007-m8`.`online_ecommerce_star_schema`.`raw_products`
+)
+
+select
+    cast(product_id as string) as product_id,
+    cast(name as string) as product_name, -- Mapped from name
+    cast(category as string) as category,
+    cast(price as numeric) as price,
+    cast(stock_quantity as int64) as stock_quantity
+from source;
+
+
+[0m21:06:44.398362 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:f77501d4-bcd8-446f-8450-6532dc8bae87&page=queryresults
+[0m21:06:44.758370 [debug] [Thread-3 (]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Unrecognized name: price at [14:10]; reason: invalidQuery, location: query, message: Unrecognized name: price at [14:10]')
+[0m21:06:45.568055 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:8aa66a3e-5fde-4a68-a3a9-6b19f498df29&page=queryresults
+[0m21:06:45.920674 [error] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:8aa66a3e-5fde-4a68-a3a9-6b19f498df29&page=queryresults
+[0m21:06:45.920674 [debug] [Thread-3 (]: Timing info for model.online_ecommerce_star_schema.stg_products (execute): 21:06:42.385211 => 21:06:45.920674
+[0m21:06:45.928226 [debug] [Thread-3 (]: Database Error in model stg_products (models\staging\stg_products.sql)
+  Unrecognized name: price at [14:10]
+  compiled Code at target\run\online_ecommerce_star_schema\models\staging\stg_products.sql
+[0m21:06:45.928226 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'da81c1b4-38e0-43e5-ab9d-064625528d9b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A00FEB2CC0>]}
+[0m21:06:45.928226 [error] [Thread-3 (]: 5 of 10 ERROR creating sql view model online_ecommerce_star_schema.stg_products  [[31mERROR[0m in 3.58s]
+[0m21:06:45.932588 [debug] [Thread-3 (]: Finished running node model.online_ecommerce_star_schema.stg_products
+[0m21:06:45.933374 [debug] [Thread-3 (]: Began running node model.online_ecommerce_star_schema.stg_reviews
+[0m21:06:45.934160 [info ] [Thread-3 (]: 6 of 10 START sql view model online_ecommerce_star_schema.stg_reviews .......... [RUN]
+[0m21:06:45.935688 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.online_ecommerce_star_schema.stg_products, now model.online_ecommerce_star_schema.stg_reviews)
+[0m21:06:45.936685 [debug] [Thread-3 (]: Began compiling node model.online_ecommerce_star_schema.stg_reviews
+[0m21:06:45.938271 [debug] [Thread-3 (]: Writing injected SQL for node "model.online_ecommerce_star_schema.stg_reviews"
+[0m21:06:45.938271 [debug] [Thread-3 (]: Timing info for model.online_ecommerce_star_schema.stg_reviews (compile): 21:06:45.936685 => 21:06:45.938271
+[0m21:06:45.938271 [debug] [Thread-3 (]: Began executing node model.online_ecommerce_star_schema.stg_reviews
+[0m21:06:45.947089 [debug] [Thread-3 (]: Writing runtime sql for node "model.online_ecommerce_star_schema.stg_reviews"
+[0m21:06:45.948263 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m21:06:45.981596 [debug] [Thread-3 (]: On model.online_ecommerce_star_schema.stg_reviews: /* {"app": "dbt", "dbt_version": "1.7.18", "profile_name": "shane_bigquery_project", "target_name": "dev", "node_id": "model.online_ecommerce_star_schema.stg_reviews"} */
+
+
+  create or replace view `evocative-depot-427007-m8`.`online_ecommerce_star_schema`.`stg_reviews`
+  OPTIONS()
+  as with source as (
+    select * from `evocative-depot-427007-m8`.`online_ecommerce_star_schema`.`raw_reviews`
+)
+
+select
+    cast(review_id as string) as review_id,
+    cast(product_id as string) as product_id,
+    cast(user_id as string) as customer_id, -- Mapped from user_id
+    cast(rating as int64) as rating,
+    cast(review_text as string) as review_text,
+    cast(review_date as timestamp) as review_date
+from source;
+
+
+[0m21:06:47.823060 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:676d6f16-020b-4d8e-8159-5c737561c191&page=queryresults
+[0m21:06:48.218030 [debug] [Thread-3 (]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Unrecognized name: user_id; Did you mean order_id? at [13:10]; reason: invalidQuery, location: query, message: Unrecognized name: user_id; Did you mean order_id? at [13:10]')
+[0m21:06:49.230389 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:b452e8ca-f001-4d76-bda7-b0a38b6cb186&page=queryresults
+[0m21:06:49.528008 [error] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:b452e8ca-f001-4d76-bda7-b0a38b6cb186&page=queryresults
+[0m21:06:49.530658 [debug] [Thread-3 (]: Timing info for model.online_ecommerce_star_schema.stg_reviews (execute): 21:06:45.938271 => 21:06:49.528661
+[0m21:06:49.531131 [debug] [Thread-3 (]: Database Error in model stg_reviews (models\staging\stg_reviews.sql)
+  Unrecognized name: user_id; Did you mean order_id? at [13:10]
+  compiled Code at target\run\online_ecommerce_star_schema\models\staging\stg_reviews.sql
+[0m21:06:49.531131 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'da81c1b4-38e0-43e5-ab9d-064625528d9b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A022B88560>]}
+[0m21:06:49.531131 [error] [Thread-3 (]: 6 of 10 ERROR creating sql view model online_ecommerce_star_schema.stg_reviews . [[31mERROR[0m in 3.60s]
+[0m21:06:49.538572 [debug] [Thread-3 (]: Finished running node model.online_ecommerce_star_schema.stg_reviews
+[0m21:06:49.538572 [debug] [Thread-3 (]: Began running node model.online_ecommerce_star_schema.stg_sessions
+[0m21:06:49.539569 [info ] [Thread-3 (]: 7 of 10 START sql view model online_ecommerce_star_schema.stg_sessions ......... [RUN]
+[0m21:06:49.540199 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.online_ecommerce_star_schema.stg_reviews, now model.online_ecommerce_star_schema.stg_sessions)
+[0m21:06:49.541234 [debug] [Thread-3 (]: Began compiling node model.online_ecommerce_star_schema.stg_sessions
+[0m21:06:49.543227 [debug] [Thread-3 (]: Writing injected SQL for node "model.online_ecommerce_star_schema.stg_sessions"
+[0m21:06:49.544313 [debug] [Thread-3 (]: Timing info for model.online_ecommerce_star_schema.stg_sessions (compile): 21:06:49.541234 => 21:06:49.544313
+[0m21:06:49.545307 [debug] [Thread-3 (]: Began executing node model.online_ecommerce_star_schema.stg_sessions
+[0m21:06:49.551290 [debug] [Thread-3 (]: Writing runtime sql for node "model.online_ecommerce_star_schema.stg_sessions"
+[0m21:06:49.552762 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m21:06:49.587844 [debug] [Thread-3 (]: On model.online_ecommerce_star_schema.stg_sessions: /* {"app": "dbt", "dbt_version": "1.7.18", "profile_name": "shane_bigquery_project", "target_name": "dev", "node_id": "model.online_ecommerce_star_schema.stg_sessions"} */
+
+
+  create or replace view `evocative-depot-427007-m8`.`online_ecommerce_star_schema`.`stg_sessions`
+  OPTIONS()
+  as with source as (
+    select * from `evocative-depot-427007-m8`.`online_ecommerce_star_schema`.`raw_sessions`
+)
+
+select
+    cast(session_id as string) as session_id,
+    cast(customer_id as string) as customer_id,
+    cast(session_start as timestamp) as session_start_timestamp, -- Mapped from session_start
+    cast(session_end as timestamp) as session_end_timestamp,     -- Mapped from session_end
+    cast(device_type as string) as device_type,
+    cast(traffic_source as string) as traffic_source
+from source;
+
+
+[0m21:06:51.608749 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:b7c14744-f0c7-46fe-92d7-24bcb387f16d&page=queryresults
+[0m21:06:51.978283 [debug] [Thread-3 (]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Unrecognized name: session_start at [13:10]; reason: invalidQuery, location: query, message: Unrecognized name: session_start at [13:10]')
+[0m21:06:53.028087 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:f20cdda5-3f53-4544-a92b-7082911af3f9&page=queryresults
+[0m21:06:53.390888 [error] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:f20cdda5-3f53-4544-a92b-7082911af3f9&page=queryresults
+[0m21:06:53.391923 [debug] [Thread-3 (]: Timing info for model.online_ecommerce_star_schema.stg_sessions (execute): 21:06:49.546313 => 21:06:53.391923
+[0m21:06:53.396757 [debug] [Thread-3 (]: Database Error in model stg_sessions (models\staging\stg_sessions.sql)
+  Unrecognized name: session_start at [13:10]
+  compiled Code at target\run\online_ecommerce_star_schema\models\staging\stg_sessions.sql
+[0m21:06:53.396757 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'da81c1b4-38e0-43e5-ab9d-064625528d9b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A023076ED0>]}
+[0m21:06:53.397752 [error] [Thread-3 (]: 7 of 10 ERROR creating sql view model online_ecommerce_star_schema.stg_sessions  [[31mERROR[0m in 3.86s]
+[0m21:06:53.398725 [debug] [Thread-3 (]: Finished running node model.online_ecommerce_star_schema.stg_sessions
+[0m21:06:53.399722 [debug] [Thread-3 (]: Began running node model.online_ecommerce_star_schema.dim_customers
+[0m21:06:53.399722 [info ] [Thread-3 (]: 8 of 10 START sql table model online_ecommerce_star_schema.dim_customers ....... [RUN]
+[0m21:06:53.400654 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.online_ecommerce_star_schema.stg_sessions, now model.online_ecommerce_star_schema.dim_customers)
+[0m21:06:53.401654 [debug] [Thread-3 (]: Began compiling node model.online_ecommerce_star_schema.dim_customers
+[0m21:06:53.407670 [debug] [Thread-3 (]: Writing injected SQL for node "model.online_ecommerce_star_schema.dim_customers"
+[0m21:06:53.408635 [debug] [Thread-3 (]: Timing info for model.online_ecommerce_star_schema.dim_customers (compile): 21:06:53.401654 => 21:06:53.408635
+[0m21:06:53.410292 [debug] [Thread-3 (]: Began executing node model.online_ecommerce_star_schema.dim_customers
+[0m21:06:53.449891 [debug] [Thread-3 (]: Writing runtime sql for node "model.online_ecommerce_star_schema.dim_customers"
+[0m21:06:53.449891 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m21:06:53.500346 [debug] [Thread-3 (]: On model.online_ecommerce_star_schema.dim_customers: /* {"app": "dbt", "dbt_version": "1.7.18", "profile_name": "shane_bigquery_project", "target_name": "dev", "node_id": "model.online_ecommerce_star_schema.dim_customers"} */
+
+  
+    
+
+    create or replace table `evocative-depot-427007-m8`.`online_ecommerce_star_schema`.`dim_customers`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      select
+    customer_id,
+    customer_name,
+    customer_email,
+    customer_city,
+    customer_state
+from `evocative-depot-427007-m8`.`online_ecommerce_star_schema`.`stg_customers`
+    );
+  
+[0m21:06:55.478727 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:cd06df6c-bef4-4b05-afe1-6c6431dd91f3&page=queryresults
+[0m21:06:55.798289 [debug] [Thread-3 (]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Unrecognized name: customer_email; Did you mean customer_id? at [16:5]; reason: invalidQuery, location: query, message: Unrecognized name: customer_email; Did you mean customer_id? at [16:5]')
+[0m21:06:56.718440 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:05d4b3fa-14b8-42ef-8733-9de518b0361d&page=queryresults
+[0m21:06:57.068202 [error] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:05d4b3fa-14b8-42ef-8733-9de518b0361d&page=queryresults
+[0m21:06:57.068202 [debug] [Thread-3 (]: Timing info for model.online_ecommerce_star_schema.dim_customers (execute): 21:06:53.411236 => 21:06:57.068202
+[0m21:06:57.068202 [debug] [Thread-3 (]: Database Error in model dim_customers (models\marts\dim_customers.sql)
+  Unrecognized name: customer_email; Did you mean customer_id? at [16:5]
+  compiled Code at target\run\online_ecommerce_star_schema\models\marts\dim_customers.sql
+[0m21:06:57.068202 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'da81c1b4-38e0-43e5-ab9d-064625528d9b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A0230ADE50>]}
+[0m21:06:57.068202 [error] [Thread-3 (]: 8 of 10 ERROR creating sql table model online_ecommerce_star_schema.dim_customers  [[31mERROR[0m in 3.67s]
+[0m21:06:57.068202 [debug] [Thread-3 (]: Finished running node model.online_ecommerce_star_schema.dim_customers
+[0m21:06:57.076780 [debug] [Thread-3 (]: Began running node model.online_ecommerce_star_schema.fact_orders
+[0m21:06:57.077655 [info ] [Thread-3 (]: 9 of 10 SKIP relation online_ecommerce_star_schema.fact_orders ................. [[33mSKIP[0m]
+[0m21:06:57.078187 [debug] [Thread-3 (]: Finished running node model.online_ecommerce_star_schema.fact_orders
+[0m21:06:57.079160 [debug] [Thread-3 (]: Began running node model.online_ecommerce_star_schema.dim_products
+[0m21:06:57.080306 [info ] [Thread-3 (]: 10 of 10 SKIP relation online_ecommerce_star_schema.dim_products ............... [[33mSKIP[0m]
+[0m21:06:57.080729 [debug] [Thread-3 (]: Finished running node model.online_ecommerce_star_schema.dim_products
+[0m21:06:57.081828 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:06:57.081828 [debug] [MainThread]: Connection 'list_evocative-depot-427007-m8' was properly closed.
+[0m21:06:57.081828 [debug] [MainThread]: Connection 'list_evocative-depot-427007-m8_online_ecommerce_star_schema' was properly closed.
+[0m21:06:57.081828 [debug] [MainThread]: Connection 'model.online_ecommerce_star_schema.dim_customers' was properly closed.
+[0m21:06:57.081828 [info ] [MainThread]: 
+[0m21:06:57.081828 [info ] [MainThread]: Finished running 7 view models, 3 table models in 0 hours 0 minutes and 33.03 seconds (33.03s).
+[0m21:06:57.089070 [debug] [MainThread]: Command end result
+[0m21:06:57.100504 [info ] [MainThread]: 
+[0m21:06:57.100504 [info ] [MainThread]: [31mCompleted with 7 errors and 0 warnings:[0m
+[0m21:06:57.100504 [info ] [MainThread]: 
+[0m21:06:57.100504 [error] [MainThread]:   Database Error in model stg_events (models\staging\stg_events.sql)
+  Unrecognized name: user_id at [13:10]
+  compiled Code at target\run\online_ecommerce_star_schema\models\staging\stg_events.sql
+[0m21:06:57.100504 [info ] [MainThread]: 
+[0m21:06:57.108240 [error] [MainThread]:   Database Error in model stg_order_items (models\staging\stg_order_items.sql)
+  Unrecognized name: price at [15:10]
+  compiled Code at target\run\online_ecommerce_star_schema\models\staging\stg_order_items.sql
+[0m21:06:57.109242 [info ] [MainThread]: 
+[0m21:06:57.110797 [error] [MainThread]:   Database Error in model stg_orders (models\staging\stg_orders.sql)
+  Unrecognized name: order_status at [14:10]
+  compiled Code at target\run\online_ecommerce_star_schema\models\staging\stg_orders.sql
+[0m21:06:57.111880 [info ] [MainThread]: 
+[0m21:06:57.112884 [error] [MainThread]:   Database Error in model stg_products (models\staging\stg_products.sql)
+  Unrecognized name: price at [14:10]
+  compiled Code at target\run\online_ecommerce_star_schema\models\staging\stg_products.sql
+[0m21:06:57.112884 [info ] [MainThread]: 
+[0m21:06:57.113926 [error] [MainThread]:   Database Error in model stg_reviews (models\staging\stg_reviews.sql)
+  Unrecognized name: user_id; Did you mean order_id? at [13:10]
+  compiled Code at target\run\online_ecommerce_star_schema\models\staging\stg_reviews.sql
+[0m21:06:57.113926 [info ] [MainThread]: 
+[0m21:06:57.114926 [error] [MainThread]:   Database Error in model stg_sessions (models\staging\stg_sessions.sql)
+  Unrecognized name: session_start at [13:10]
+  compiled Code at target\run\online_ecommerce_star_schema\models\staging\stg_sessions.sql
+[0m21:06:57.115922 [info ] [MainThread]: 
+[0m21:06:57.115922 [error] [MainThread]:   Database Error in model dim_customers (models\marts\dim_customers.sql)
+  Unrecognized name: customer_email; Did you mean customer_id? at [16:5]
+  compiled Code at target\run\online_ecommerce_star_schema\models\marts\dim_customers.sql
+[0m21:06:57.116945 [info ] [MainThread]: 
+[0m21:06:57.117881 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=7 SKIP=2 TOTAL=10
+[0m21:06:57.118903 [debug] [MainThread]: Command `dbt run` failed at 21:06:57.118903 after 34.96 seconds
+[0m21:06:57.118903 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A022831EB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A022A19AC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A022575FD0>]}
+[0m21:06:57.119903 [debug] [MainThread]: Flushing usage events

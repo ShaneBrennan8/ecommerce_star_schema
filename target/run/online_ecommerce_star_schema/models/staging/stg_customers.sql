@@ -12,5 +12,7 @@ select
     cast(email as string) as email,
     cast(signup_date as timestamp) as signup_date,
     cast(country as string) as country
-from source;
+from source 
+
+--temp comment just so I can push;
 
