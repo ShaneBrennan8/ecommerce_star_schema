@@ -1,6 +1,7 @@
-ecommerce_profile:
+shane_bigquery_project:
   target: dev
   outputs:
+    # 1. This is what your local machine runs by default
     dev:
       type: bigquery
       method: service-account
@@ -10,6 +11,16 @@ ecommerce_profile:
       timeout_seconds: 300
       location: US
       priority: interactive
-      # If the CI environment variable is present, dbt uses that string natively. 
-      # Locally on Windows, it reads your local JSON credentials string.
-      keyfile_json: "{{ env_var('DBT_GCP_JSON_KEY_FILE', 'C:\\Users\\shane\\.dbt\\sa_key_file.json') }}"
+      keyfile: "C:\\Users\\shane\\.dbt\\sa_key_file.json"
+
+    # 2. This is what GitHub Actions will use when explicitly targeted
+    ci:
+      type: bigquery
+      method: service-account
+      project: evocative-depot-427007-m8
+      dataset: online_ecommerce_star_schema
+      threads: 1
+      timeout_seconds: 300
+      location: US
+      priority: interactive
+      keyfile_json: '{{ env_var("DBT_GCP_JSON_KEY_FILE") }}'

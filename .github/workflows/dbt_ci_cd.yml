@@ -34,13 +34,13 @@ jobs:
         # Passes the secret string smoothly to the dbt env_var engine
         DBT_GCP_JSON_KEY_FILE: ${{ secrets.DBT_GCP_JSON_KEY_FILE }}
       run: |
-        dbt debug
+        dbt debug --target ci
         dbt deps
-        dbt seed
-        dbt run
+        dbt seed --target ci
+        dbt run --target ci
 
     - name: Test dbt models
       env:
         DBT_GCP_JSON_KEY_FILE: ${{ secrets.DBT_GCP_JSON_KEY_FILE }}
       run: |
-        dbt test
+        dbt test --target ci

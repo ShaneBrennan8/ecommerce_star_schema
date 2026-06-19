@@ -2,7 +2,7 @@ name: 'online_ecommerce_star_schema'
 version: '1.0.0'
 config-version: 2
 
-profile: 'ecommerce_profile'
+profile: 'shane_bigquery_project'
 
 model-paths: ["models"]
 analysis-paths: ["analyses"]
@@ -19,7 +19,7 @@ models:
   online_ecommerce_star_schema:
     staging:
       +materialized: view
-      +schema: online_ecommerce_star_schema
+      #+schema: online_ecommerce_star_schema  ## commented out as it was causing a double name
     marts:
       +materialized: table
-      +schema: online_ecommerce_star_schema
+     # +schema: online_ecommerce_star_schema
