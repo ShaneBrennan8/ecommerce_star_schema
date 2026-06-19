@@ -31,13 +31,11 @@ jobs:
 
     - name: Run dbt pipeline
       env:
-        # 1. Feed the Base64 string safely into the environment
         BASE64_GCP_KEY: ${{ secrets.DBT_GCP_JSON_KEY_FILE }}
       run: |
-        # 2. Decode it into a concrete file on the fly
-        echo "$BASE64_GCP_KEY" | base64 --decode > ./gcp_key.json
+        # Using printf ensures the Base64 string is decoded accurately with zero trailing noise
+        printf "%s" "$BASE64_GCP_KEY" | base64 --decode > ./gcp_key.json
         
-        # 3. Run dbt pointing directly to that concrete file path
         dbt debug --target ci
         dbt deps
         dbt seed --target ci
