@@ -1,16 +1,18 @@
 
 
-  create or replace view `evocative-depot-427007-m8`.`online_ecommerce_star_schema`.`stg_order_items`
+  create or replace view `evocative-depot-427007-m8`.`online_ecommerce_star_schema_staging`.`stg_order_items`
   OPTIONS()
   as with source as (
-    select * from `evocative-depot-427007-m8`.`online_ecommerce_star_schema`.`raw_order_items`
+    select * from `evocative-depot-427007-m8`.`online_ecommerce_star_schema_raw`.`raw_order_items`
 )
 
 select
-    generate_uuid() as order_item_id, -- Generates a clean key if missing
     cast(order_id as string) as order_id,
+    generate_uuid() as order_id_secondary, -- Generates a clean key if missing
     cast(product_id as string) as product_id,
+    unit_price_usd,
     cast(quantity as int64) as quantity,
-    cast(price as numeric) as price
+    cast(line_total_usd as float64) as line_total_usd
+
 from source;
 

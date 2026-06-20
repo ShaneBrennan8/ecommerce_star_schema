@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: bq_raw
     database: evocative-depot-427007-m8
-    schema: online_ecommerce_star_schema
+    schema: online_ecommerce_star_schema_raw
     tables:
       - name: raw_customers
       - name: raw_orders

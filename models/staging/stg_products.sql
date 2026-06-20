@@ -4,8 +4,10 @@ with source as (
 
 select
     cast(product_id as string) as product_id,
-    cast(name as string) as product_name, -- Mapped from name
+    cast(name as string) as product_name, 
     cast(category as string) as category,
-    cast(price as numeric) as price,
-    cast(stock_quantity as int64) as stock_quantity
+    cast(price_usd as numeric) as price,
+    cast(cost_usd as numeric) as cost_usd,
+    cast(margin_usd as numeric) as margin_usd
+    --cast(available_stock as int64) as available_stock, leaving as placeholder 
 from source

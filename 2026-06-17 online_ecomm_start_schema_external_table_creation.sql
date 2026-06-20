@@ -1,8 +1,8 @@
 -- Create the raw landing dataset if it doesn't exist
-CREATE SCHEMA IF NOT EXISTS `evocative-depot-427007-m8.online_ecommerce_star_schema`;
+CREATE SCHEMA IF NOT EXISTS `evocative-depot-427007-m8.online_ecommerce_star_schema_raw`;
 
 
-CREATE OR REPLACE EXTERNAL TABLE `evocative-depot-427007-m8.online_ecommerce_star_schema.raw_customers`
+CREATE OR REPLACE EXTERNAL TABLE `evocative-depot-427007-m8.online_ecommerce_star_schema_raw.raw_customers`
 OPTIONS (
   format = 'CSV',
   uris = ['gs://evocative-depot-ecommerce-raw/online_ecommerce_star_schema/customers.csv'],
@@ -11,7 +11,7 @@ OPTIONS (
 );
 
 
-CREATE OR REPLACE EXTERNAL TABLE `evocative-depot-427007-m8.online_ecommerce_star_schema.raw_events`
+CREATE OR REPLACE EXTERNAL TABLE `evocative-depot-427007-m8.online_ecommerce_star_schema_raw.raw_events`
 OPTIONS (
   format = 'CSV',
   uris = ['gs://evocative-depot-ecommerce-raw/online_ecommerce_star_schema/events.csv'],
@@ -20,7 +20,7 @@ OPTIONS (
 );
 
 
-CREATE OR REPLACE EXTERNAL TABLE `evocative-depot-427007-m8.online_ecommerce_star_schema.raw_order_items`
+CREATE OR REPLACE EXTERNAL TABLE `evocative-depot-427007-m8.online_ecommerce_star_schema_raw.raw_order_items`
 OPTIONS (
   format = 'CSV',
   uris = ['gs://evocative-depot-ecommerce-raw/online_ecommerce_star_schema/order_items.csv'],
@@ -29,7 +29,7 @@ OPTIONS (
 );
 
 
-CREATE OR REPLACE EXTERNAL TABLE `evocative-depot-427007-m8.online_ecommerce_star_schema.raw_orders`
+CREATE OR REPLACE EXTERNAL TABLE `evocative-depot-427007-m8.online_ecommerce_star_schema_raw.raw_orders`
 OPTIONS (
   format = 'CSV',
   uris = ['gs://evocative-depot-ecommerce-raw/online_ecommerce_star_schema/orders.csv'],
@@ -38,7 +38,7 @@ OPTIONS (
 );
 
 
-CREATE OR REPLACE EXTERNAL TABLE `evocative-depot-427007-m8.online_ecommerce_star_schema.raw_products`
+CREATE OR REPLACE EXTERNAL TABLE `evocative-depot-427007-m8.online_ecommerce_star_schema_raw.raw_products`
 OPTIONS (
   format = 'CSV',
   uris = ['gs://evocative-depot-ecommerce-raw/online_ecommerce_star_schema/products.csv'],
@@ -46,7 +46,7 @@ OPTIONS (
   null_marker = ''
 );
 
-CREATE OR REPLACE EXTERNAL TABLE `evocative-depot-427007-m8.online_ecommerce_star_schema.raw_reviews`
+CREATE OR REPLACE EXTERNAL TABLE `evocative-depot-427007-m8.online_ecommerce_star_schema_raw.raw_reviews`
 OPTIONS (
   format = 'CSV',
   uris = ['gs://evocative-depot-ecommerce-raw/online_ecommerce_star_schema/reviews.csv'],
@@ -55,7 +55,7 @@ OPTIONS (
 );
 
 
-CREATE OR REPLACE EXTERNAL TABLE `evocative-depot-427007-m8.online_ecommerce_star_schema.raw_sessions`
+CREATE OR REPLACE EXTERNAL TABLE `evocative-depot-427007-m8.online_ecommerce_star_schema_raw.raw_sessions`
 OPTIONS (
   format = 'CSV',
   uris = ['gs://evocative-depot-ecommerce-raw/online_ecommerce_star_schema/sessions.csv'],

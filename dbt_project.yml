@@ -18,8 +18,8 @@ clean-targets:
 models:
   online_ecommerce_star_schema:
     staging:
+      +schema: staging
       +materialized: view
-      #+schema: online_ecommerce_star_schema  ## commented out as it was causing a double name
     marts:
+      +schema: marts
       +materialized: table
-     # +schema: online_ecommerce_star_schema

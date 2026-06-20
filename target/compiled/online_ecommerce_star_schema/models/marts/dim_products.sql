@@ -5,4 +5,4 @@ select
     price,
     cost_usd,
     margin_usd
-from {{ ref('stg_products') }}
+from `evocative-depot-427007-m8`.`online_ecommerce_star_schema_staging`.`stg_products`
