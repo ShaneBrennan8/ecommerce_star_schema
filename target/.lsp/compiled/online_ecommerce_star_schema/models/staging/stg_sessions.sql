@@ -1,5 +1,5 @@
 with raw_source as ( -- had to rename this to avoid confusion with the source() function
-    select * from {{ source('bq_raw', 'raw_sessions') }}
+    select * from `evocative-depot-427007-m8`.`online_ecommerce_star_schema_raw`.`raw_sessions`
 )
 
 select

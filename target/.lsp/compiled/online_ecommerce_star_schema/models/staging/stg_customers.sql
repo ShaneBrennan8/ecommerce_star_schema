@@ -1,5 +1,5 @@
 with source as (
-    select * from {{ source('bq_raw', 'raw_customers') }}
+    select * from `evocative-depot-427007-m8`.`online_ecommerce_star_schema_raw`.`raw_customers`
 )
 
 select

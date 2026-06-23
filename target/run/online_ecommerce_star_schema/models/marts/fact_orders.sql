@@ -20,15 +20,12 @@ order_items as (
 )
 
 select
-    oi.order_item_id,
     o.order_id,
     o.customer_id,
     oi.product_id,
-    o.order_date,
-    o.order_status,
-    oi.quantity,
-    oi.price,
-    (oi.quantity * oi.price) as extended_price_amount
+    o.order_datetime,
+    oi.unit_price_usd,
+    (1 * oi.unit_price_usd) as extended_price_amount
 from order_items oi
 join orders o on oi.order_id = o.order_id
 
