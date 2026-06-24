@@ -2910,3 +2910,444 @@
 08:02:19.146300 [info ]: Finished scheduling [  0.00s]
 08:02:19.146989 [info ]: Cached model count updated: 11 models (accurate)
 08:02:19.416962 [debug]: License check failed: Feature not licensed: 'lineage'
+==================== 2026-06-24T02:38:01.741538Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-06-24T02:38:01.742473Z | 2abfa3b3-4e72-466e-a103-d86a76382dda ====================
+02:38:01.742600 [info ]: Starting dbt LSP server
+02:38:01.742709 [info ]: Connecting to LSP client on port 8000
+02:38:01.746113 [info ]: Successfully connected to LSP client
+02:38:01.746176 [info ]: Creating LSP service...
+02:38:02.037765 [info ]: Creating LSP server...
+02:38:02.037810 [info ]: Starting LSP server...
+02:38:02.224607 [info ]: Loading profiles.yml
+02:38:02.330667 [info ]: Started loading project
+02:38:02.332248 [info ]: Loading profiles.yml
+02:38:02.345950 [debug]:    Started loading packages
+02:38:02.355282 [debug]:     Loaded [  0.01s] packages
+02:38:02.357619 [info ]: Finished loading project [  0.03s]
+02:38:02.358854 [info ]: Started parsing
+02:38:02.516607 [debug]: Finished parsing models\staging\schema.yml [  0.04s]
+02:38:02.547767 [debug]: Finished parsing models\marts\core\dim_customers.sql [  0.03s]
+02:38:02.570278 [debug]: Finished parsing models\marts\core\dim_products.sql [  0.02s]
+02:38:02.599469 [debug]: Finished parsing models\marts\core\fact_orders.sql [  0.03s]
+02:38:02.606013 [debug]: Finished parsing models\marts\marketing_analytics\fct_customer_sessions.sql [  0.01s]
+02:38:02.632116 [debug]: Finished parsing models\staging\stg_customers.sql [  0.03s]
+02:38:02.651053 [debug]: Finished parsing models\staging\stg_events.sql [  0.02s]
+02:38:02.674002 [debug]: Finished parsing models\staging\stg_order_items.sql [  0.02s]
+02:38:02.697353 [debug]: Finished parsing models\staging\stg_orders.sql [  0.02s]
+02:38:02.721546 [debug]: Finished parsing models\staging\stg_products.sql [  0.02s]
+02:38:02.776549 [debug]: Finished parsing models\staging\stg_reviews.sql [  0.06s]
+02:38:02.807469 [debug]: Finished parsing models\staging\stg_sessions.sql [  0.03s]
+02:38:02.847453 [info ]: Finished parsing [  0.49s]
+02:38:02.850160 [info ]: Cached model count updated: 11 models (estimate)
+02:38:02.850212 [info ]: Cached model count updated: 11 models (accurate)
+02:38:02.850652 [info ]: Started scheduling
+02:38:02.857295 [info ]: Finished scheduling [  0.01s]
+02:38:02.857413 [debug]: Compilation - 3 nodes selected: {"model.online_ecommerce_star_schema.fct_customer_sessions", "model.online_ecommerce_star_schema.stg_events", "model.online_ecommerce_star_schema.stg_sessions"}
+02:38:02.857554 [info ]: Started scheduling
+02:38:02.857895 [info ]: Finished scheduling [  0.00s]
+02:38:02.858268 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "evocative-depot-427007-m8", schema: "online_ecommerce_star_schema_raw", table: "raw_customers" }) and interval: None
+02:38:02.858426 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "evocative-depot-427007-m8", schema: "online_ecommerce_star_schema_raw", table: "raw_order_items" }) and interval: None
+02:38:02.858520 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "evocative-depot-427007-m8", schema: "online_ecommerce_star_schema_raw", table: "raw_events" }) and interval: None
+02:38:02.858600 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "evocative-depot-427007-m8", schema: "online_ecommerce_star_schema_raw", table: "raw_reviews" }) and interval: None
+02:38:02.858674 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "evocative-depot-427007-m8", schema: "online_ecommerce_star_schema_raw", table: "raw_sessions" }) and interval: None
+02:38:02.858750 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "evocative-depot-427007-m8", schema: "online_ecommerce_star_schema_raw", table: "raw_orders" }) and interval: None
+02:38:02.858823 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "evocative-depot-427007-m8", schema: "online_ecommerce_star_schema_raw", table: "raw_products" }) and interval: None
+02:38:02.958284 [debug]: Requesting license from https://we177.us1.dbt.com/api/private/accounts/70506183141867/feature-licenses/ with 1 key IDs: ["fusion-prod-2025-11-20"]
+02:38:04.261881 [warn ]: [LicenseError (dbt1068)]: Error loading license from remote server we177.us1.dbt.com, skipping: Email not verified
+02:38:04.274358 [debug]: Requesting license from https://we177.us1.dbt.com/api/private/accounts/70506183141867/feature-licenses/ with 1 key IDs: ["fusion-prod-2025-11-20"]
+02:38:05.454891 [debug]: License check failed: Feature not licensed: 'lineage'
+02:38:05.457509 [info ]: Started building task graph
+02:38:05.458176 [info ]: Finished building task graph [  0.00s]
+02:38:05.465046 [info ]: Started rendering (3 nodes)
+02:38:05.465281 [info ]: Started model online_ecommerce_star_schema_marts.fct_customer_sessions
+02:38:05.465425 [debug]: Started rendering model online_ecommerce_star_schema_marts.fct_customer_sessions
+02:38:05.465562 [info ]: Started model online_ecommerce_star_schema_staging.stg_sessions
+02:38:05.465664 [debug]: Started rendering model online_ecommerce_star_schema_staging.stg_sessions
+02:38:05.465777 [info ]: Started model online_ecommerce_star_schema_staging.stg_events
+02:38:05.465834 [debug]: Started rendering model online_ecommerce_star_schema_staging.stg_events
+02:38:05.480149 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.fct_customer_sessions at target\.lsp\compiled\online_ecommerce_star_schema\models\marts\marketing_analytics\fct_customer_sessions.sql
+02:38:05.488849 [debug]: Finished rendering [  0.02s] model online_ecommerce_star_schema_marts.fct_customer_sessions [success]
+02:38:05.489122 [info ]: Started analyzing (3 nodes)
+02:38:05.489177 [debug]: Started analyzing model online_ecommerce_star_schema_marts.fct_customer_sessions
+02:38:05.500107 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.stg_sessions at target\.lsp\compiled\online_ecommerce_star_schema\models\staging\stg_sessions.sql
+02:38:05.505610 [debug]: Finished rendering [  0.04s] model online_ecommerce_star_schema_staging.stg_sessions [success]
+02:38:05.505741 [debug]: Started analyzing model online_ecommerce_star_schema_staging.stg_sessions
+02:38:05.518800 [debug]: Finished analyzing [  0.01s] model online_ecommerce_star_schema_staging.stg_sessions [success]
+02:38:05.518866 [info ]:  Succeeded [  0.05s] model online_ecommerce_star_schema_staging.stg_sessions (view)
+02:38:05.546794 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.stg_events at target\.lsp\compiled\online_ecommerce_star_schema\models\staging\stg_events.sql
+02:38:05.549903 [debug]: Finished rendering [  0.08s] model online_ecommerce_star_schema_staging.stg_events [success]
+02:38:05.549973 [info ]: Finished rendering [  0.08s] (3 nodes, 0 skipped, 0 errors)
+02:38:05.550050 [debug]: Started analyzing model online_ecommerce_star_schema_staging.stg_events
+02:38:05.553288 [debug]: Finished analyzing [  0.00s] model online_ecommerce_star_schema_staging.stg_events [success]
+02:38:05.553335 [info ]:  Succeeded [  0.09s] model online_ecommerce_star_schema_staging.stg_events (view)
+02:38:05.736971 [debug]: Finished analyzing [  0.25s] model online_ecommerce_star_schema_marts.fct_customer_sessions [success]
+02:38:05.737015 [info ]: Finished analyzing [  0.25s] (3 nodes, 0 skipped, 0 errors)
+02:38:05.737035 [info ]:  Succeeded [  0.27s] model online_ecommerce_star_schema_marts.fct_customer_sessions (table)
+02:38:05.748124 [info ]: Started scheduling
+02:38:05.748349 [info ]: Finished scheduling [  0.00s]
+02:38:05.755215 [info ]: Cached model count updated: 11 models (accurate)
+02:38:06.018725 [debug]: License check failed: Feature not licensed: 'lineage'
+02:38:07.641612 [info ]: Started loading project
+02:38:07.643710 [info ]: Loading profiles.yml
+02:38:07.941361 [info ]: Cached model count updated: 11 models (estimate)
+02:38:07.941404 [info ]: Cached model count updated: 11 models (accurate)
+02:38:07.941490 [info ]: Started scheduling
+02:38:07.941755 [info ]: Finished scheduling [  0.00s]
+02:38:07.941792 [debug]: Compilation - 3 nodes selected: {"model.online_ecommerce_star_schema.fct_customer_sessions", "model.online_ecommerce_star_schema.stg_events", "model.online_ecommerce_star_schema.stg_sessions"}
+02:38:07.944140 [debug]: License check failed: Feature not licensed: 'lineage'
+02:38:07.945254 [info ]: Started building task graph
+02:38:07.945360 [info ]: Finished building task graph [  0.00s]
+02:38:07.953733 [info ]: Started rendering (3 nodes)
+02:38:07.953821 [info ]: Started model online_ecommerce_star_schema_marts.fct_customer_sessions
+02:38:07.953864 [debug]: Started rendering model online_ecommerce_star_schema_marts.fct_customer_sessions
+02:38:07.953983 [info ]: Finished loading project [  0.31s]
+02:38:07.954026 [info ]: Started model online_ecommerce_star_schema_staging.stg_sessions
+02:38:07.954078 [debug]: Started rendering model online_ecommerce_star_schema_staging.stg_sessions
+02:38:07.954139 [info ]: Started model online_ecommerce_star_schema_staging.stg_events
+02:38:07.954170 [debug]: Started rendering model online_ecommerce_star_schema_staging.stg_events
+02:38:07.954820 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.stg_sessions at target\.lsp\compiled\online_ecommerce_star_schema\models\staging\stg_sessions.sql
+02:38:07.954843 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.fct_customer_sessions at target\.lsp\compiled\online_ecommerce_star_schema\models\marts\marketing_analytics\fct_customer_sessions.sql
+02:38:07.954914 [debug]: Finished rendering [  0.00s] model online_ecommerce_star_schema_staging.stg_sessions [success]
+02:38:07.954965 [info ]: Started analyzing (3 nodes)
+02:38:07.954989 [debug]: Started analyzing model online_ecommerce_star_schema_staging.stg_sessions
+02:38:07.955040 [debug]: Finished rendering [  0.00s] model online_ecommerce_star_schema_marts.fct_customer_sessions [success]
+02:38:07.955073 [debug]: Started analyzing model online_ecommerce_star_schema_marts.fct_customer_sessions
+02:38:07.955346 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.stg_events at target\.lsp\compiled\online_ecommerce_star_schema\models\staging\stg_events.sql
+02:38:07.955430 [debug]: Finished rendering [  0.00s] model online_ecommerce_star_schema_staging.stg_events [success]
+02:38:07.955455 [info ]: Finished rendering [  0.00s] (3 nodes, 0 skipped, 0 errors)
+02:38:07.955477 [debug]: Started analyzing model online_ecommerce_star_schema_staging.stg_events
+02:38:07.955514 [debug]: Finished analyzing [  0.00s] model online_ecommerce_star_schema_staging.stg_sessions [success]
+02:38:07.955537 [info ]:  Succeeded [-------] model online_ecommerce_star_schema_staging.stg_sessions (view)
+02:38:07.955723 [debug]: Finished analyzing [  0.00s] model online_ecommerce_star_schema_staging.stg_events [success]
+02:38:07.955755 [info ]:  Succeeded [  0.00s] model online_ecommerce_star_schema_staging.stg_events (view)
+02:38:07.961525 [debug]: Finished analyzing [  0.01s] model online_ecommerce_star_schema_marts.fct_customer_sessions [success]
+02:38:07.961576 [info ]: Finished analyzing [  0.01s] (3 nodes, 0 skipped, 0 errors)
+02:38:07.961603 [info ]:  Succeeded [  0.01s] model online_ecommerce_star_schema_marts.fct_customer_sessions (table)
+02:38:07.975535 [info ]: Started scheduling
+02:38:07.975668 [info ]: Finished scheduling [  0.00s]
+02:38:07.977278 [info ]: Cached model count updated: 11 models (accurate)
+02:38:08.232035 [debug]: License check failed: Feature not licensed: 'lineage'
+02:38:09.931938 [info ]: Started loading project
+02:38:09.933950 [info ]: Loading profiles.yml
+02:38:10.038492 [info ]: Cached model count updated: 11 models (estimate)
+02:38:10.038537 [info ]: Cached model count updated: 11 models (accurate)
+02:38:10.038627 [info ]: Started scheduling
+02:38:10.038891 [info ]: Finished scheduling [  0.00s]
+02:38:10.038939 [debug]: Compilation - 11 nodes selected: {"model.online_ecommerce_star_schema.dim_customers", "model.online_ecommerce_star_schema.dim_products", "model.online_ecommerce_star_schema.fact_orders", "model.online_ecommerce_star_schema.fct_customer_sessions", "model.online_ecommerce_star_schema.stg_customers", "model.online_ecommerce_star_schema.stg_events", "model.online_ecommerce_star_schema.stg_order_items", "model.online_ecommerce_star_schema.stg_orders", "model.online_ecommerce_star_schema.stg_products", "model.online_ecommerce_star_schema.stg_reviews", "model.online_ecommerce_star_schema.stg_sessions"}
+02:38:10.041360 [debug]: License check failed: Feature not licensed: 'lineage'
+02:38:10.042593 [debug]:    Started downloading relations (1 items)
+02:38:10.042890 [info ]: Finished loading project [  0.11s]
+02:38:12.001693 [debug]:     Failed [  1.96s] downloading relations (error: [BigQuery] credentials: could not parse key: private key should be a PEM or plain PKCS1 or PKCS8: asn1: structure error: tags don't match (16 vs {class:0 tag:13 length:45 isCompound:true}) {optional:false explicit:false application:false private:false defaultValue:<nil> tag:<nil> stringType:0 timeType:0 set:false omitEmpty:false} pkcs1PrivateKey @2)
+02:38:12.002562 [info ]: Started building task graph
+02:38:12.002816 [info ]: Finished building task graph [  0.00s]
+02:38:12.004076 [info ]: Started rendering (11 nodes)
+02:38:12.004121 [info ]: Started model online_ecommerce_star_schema_staging.stg_reviews
+02:38:12.004143 [debug]: Started rendering model online_ecommerce_star_schema_staging.stg_reviews
+02:38:12.004193 [info ]: Started model online_ecommerce_star_schema_marts.fct_customer_sessions
+02:38:12.004224 [debug]: Started rendering model online_ecommerce_star_schema_marts.fct_customer_sessions
+02:38:12.004265 [info ]: Started model online_ecommerce_star_schema_staging.stg_sessions
+02:38:12.004299 [debug]: Started rendering model online_ecommerce_star_schema_staging.stg_sessions
+02:38:12.004346 [info ]: Started model online_ecommerce_star_schema_staging.stg_events
+02:38:12.004381 [debug]: Started rendering model online_ecommerce_star_schema_staging.stg_events
+02:38:12.004437 [info ]: Started model online_ecommerce_star_schema_marts.fact_orders
+02:38:12.004471 [debug]: Started rendering model online_ecommerce_star_schema_marts.fact_orders
+02:38:12.004515 [info ]: Started model online_ecommerce_star_schema_staging.stg_orders
+02:38:12.004544 [debug]: Started rendering model online_ecommerce_star_schema_staging.stg_orders
+02:38:12.004588 [info ]: Started model online_ecommerce_star_schema_staging.stg_order_items
+02:38:12.004617 [debug]: Started rendering model online_ecommerce_star_schema_staging.stg_order_items
+02:38:12.004657 [info ]: Started model online_ecommerce_star_schema_marts.dim_products
+02:38:12.004685 [debug]: Started rendering model online_ecommerce_star_schema_marts.dim_products
+02:38:12.004874 [info ]: Started model online_ecommerce_star_schema_staging.stg_products
+02:38:12.004915 [debug]: Started rendering model online_ecommerce_star_schema_staging.stg_products
+02:38:12.004953 [info ]: Started model online_ecommerce_star_schema_marts.dim_customers
+02:38:12.004989 [debug]: Started rendering model online_ecommerce_star_schema_marts.dim_customers
+02:38:12.005046 [info ]: Started model online_ecommerce_star_schema_staging.stg_customers
+02:38:12.005074 [debug]: Started rendering model online_ecommerce_star_schema_staging.stg_customers
+02:38:12.005068 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.fct_customer_sessions at target\.lsp\compiled\online_ecommerce_star_schema\models\marts\marketing_analytics\fct_customer_sessions.sql
+02:38:12.005678 [debug]: Finished rendering [  0.00s] model online_ecommerce_star_schema_marts.fct_customer_sessions [success]
+02:38:12.005917 [info ]: Started analyzing (11 nodes)
+02:38:12.005984 [debug]: Started analyzing model online_ecommerce_star_schema_marts.fct_customer_sessions
+02:38:12.006809 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.stg_sessions at target\.lsp\compiled\online_ecommerce_star_schema\models\staging\stg_sessions.sql
+02:38:12.007158 [debug]: Finished rendering [  0.00s] model online_ecommerce_star_schema_staging.stg_sessions [success]
+02:38:12.007238 [debug]: Started analyzing model online_ecommerce_star_schema_staging.stg_sessions
+02:38:12.007536 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.stg_events at target\.lsp\compiled\online_ecommerce_star_schema\models\staging\stg_events.sql
+02:38:12.008255 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.stg_reviews at target\.lsp\compiled\online_ecommerce_star_schema\models\staging\stg_reviews.sql
+02:38:12.010171 [debug]: Finished analyzing [  0.00s] model online_ecommerce_star_schema_staging.stg_sessions [success]
+02:38:12.010217 [info ]:  Succeeded [  0.00s] model online_ecommerce_star_schema_staging.stg_sessions (view)
+02:38:12.010836 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.stg_orders at target\.lsp\compiled\online_ecommerce_star_schema\models\staging\stg_orders.sql
+02:38:12.014652 [debug]: Finished rendering [  0.01s] model online_ecommerce_star_schema_staging.stg_events [success]
+02:38:12.015302 [debug]: Started analyzing model online_ecommerce_star_schema_staging.stg_events
+02:38:12.016482 [debug]: Finished rendering [  0.01s] model online_ecommerce_star_schema_staging.stg_reviews [success]
+02:38:12.016294 [debug]: Started analyzing model online_ecommerce_star_schema_staging.stg_reviews
+02:38:12.016670 [debug]: Finished analyzing [  0.00s] model online_ecommerce_star_schema_staging.stg_events [success]
+02:38:12.016703 [info ]:  Succeeded [  0.01s] model online_ecommerce_star_schema_staging.stg_events (view)
+02:38:12.016756 [debug]: Finished rendering [  0.01s] model online_ecommerce_star_schema_staging.stg_orders [success]
+02:38:12.016794 [debug]: Started analyzing model online_ecommerce_star_schema_staging.stg_orders
+02:38:12.017161 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.dim_products at target\.lsp\compiled\online_ecommerce_star_schema\models\marts\core\dim_products.sql
+02:38:12.017652 [debug]: Finished rendering [  0.01s] model online_ecommerce_star_schema_marts.dim_products [success]
+02:38:12.017817 [debug]: Started analyzing model online_ecommerce_star_schema_marts.dim_products
+02:38:12.017946 [debug]: Finished analyzing [  0.00s] model online_ecommerce_star_schema_staging.stg_reviews [success]
+02:38:12.017999 [info ]:  Succeeded [  0.01s] model online_ecommerce_star_schema_staging.stg_reviews (view)
+02:38:12.018793 [debug]: Finished analyzing [  0.00s] model online_ecommerce_star_schema_marts.dim_products [success]
+02:38:12.018834 [info ]:  Succeeded [  0.01s] model online_ecommerce_star_schema_marts.dim_products (table)
+02:38:12.019218 [debug]: Finished analyzing [  0.00s] model online_ecommerce_star_schema_staging.stg_orders [success]
+02:38:12.019301 [info ]:  Succeeded [  0.01s] model online_ecommerce_star_schema_staging.stg_orders (view)
+02:38:12.020751 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.dim_customers at target\.lsp\compiled\online_ecommerce_star_schema\models\marts\core\dim_customers.sql
+02:38:12.024602 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.stg_customers at target\.lsp\compiled\online_ecommerce_star_schema\models\staging\stg_customers.sql
+02:38:12.024895 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.stg_order_items at target\.lsp\compiled\online_ecommerce_star_schema\models\staging\stg_order_items.sql
+02:38:12.037265 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.stg_products at target\.lsp\compiled\online_ecommerce_star_schema\models\staging\stg_products.sql
+02:38:12.044075 [debug]: Finished rendering [  0.04s] model online_ecommerce_star_schema_marts.dim_customers [success]
+02:38:12.044134 [debug]: Started analyzing model online_ecommerce_star_schema_marts.dim_customers
+02:38:12.046477 [debug]: Finished analyzing [  0.00s] model online_ecommerce_star_schema_marts.dim_customers [success]
+02:38:12.046650 [info ]:  Succeeded [  0.04s] model online_ecommerce_star_schema_marts.dim_customers (table)
+02:38:12.046858 [debug]: Finished rendering [  0.04s] model online_ecommerce_star_schema_staging.stg_customers [success]
+02:38:12.050782 [debug]: Started analyzing model online_ecommerce_star_schema_staging.stg_customers
+02:38:12.053557 [debug]: Finished analyzing [  0.00s] model online_ecommerce_star_schema_staging.stg_customers [success]
+02:38:12.053608 [info ]:  Succeeded [  0.04s] model online_ecommerce_star_schema_staging.stg_customers (view)
+02:38:12.053829 [debug]: Finished rendering [  0.05s] model online_ecommerce_star_schema_staging.stg_order_items [success]
+02:38:12.053870 [debug]: Started analyzing model online_ecommerce_star_schema_staging.stg_order_items
+02:38:12.054177 [error]: [DbDriverFailed (dbt1308)]: [BigQuery] credentials: could not parse key: private key should be a PEM or plain PKCS1 or PKCS8: asn1: structure error: tags don't match (16 vs {class:0 tag:13 length:45 isCompound:true}) {optional:false explicit:false application:false private:false defaultValue:<nil> tag:<nil> stringType:0 timeType:0 set:false omitEmpty:false} pkcs1PrivateKey @2
+(in models\marts\core\fact_orders.sql:66:7)
+  --> models\marts\core\fact_orders.sql:66:7
+02:38:12.054314 [debug]: Started analyzing model online_ecommerce_star_schema_marts.fact_orders
+02:38:12.054378 [debug]: Finished analyzing [  0.00s] model online_ecommerce_star_schema_marts.fact_orders [skipped]
+02:38:12.054405 [info ]:     Failed [  0.05s] model online_ecommerce_star_schema_marts.fact_orders (table)
+02:38:12.054528 [debug]: Finished rendering [  0.05s] model online_ecommerce_star_schema_marts.fact_orders [error]
+02:38:12.054976 [debug]: Finished analyzing [  0.05s] model online_ecommerce_star_schema_marts.fct_customer_sessions [success]
+02:38:12.055015 [info ]:  Succeeded [  0.05s] model online_ecommerce_star_schema_marts.fct_customer_sessions (table)
+02:38:12.055107 [debug]: Finished rendering [  0.05s] model online_ecommerce_star_schema_staging.stg_products [success]
+02:38:12.055135 [info ]: Finished rendering [  0.05s] (11 nodes, 0 skipped, 1 errors)
+02:38:12.055170 [debug]: Started analyzing model online_ecommerce_star_schema_staging.stg_products
+02:38:12.055533 [debug]: Finished analyzing [  0.00s] model online_ecommerce_star_schema_staging.stg_products [success]
+02:38:12.055566 [info ]:  Succeeded [  0.05s] model online_ecommerce_star_schema_staging.stg_products (view)
+02:38:12.055905 [debug]: Finished analyzing [  0.00s] model online_ecommerce_star_schema_staging.stg_order_items [success]
+02:38:12.055932 [info ]: Finished analyzing [  0.05s] (11 nodes, 1 skipped, 0 errors)
+02:38:12.055953 [info ]:  Succeeded [  0.05s] model online_ecommerce_star_schema_staging.stg_order_items (view)
+02:38:12.109065 [info ]: Started scheduling
+02:38:12.109263 [info ]: Finished scheduling [  0.00s]
+02:38:12.111181 [info ]: Cached model count updated: 11 models (accurate)
+==================== 2026-06-24T02:39:40.983483Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-06-24T02:39:40.984095Z | d3f81f0b-de9a-4681-b931-489b55de3f30 ====================
+02:39:40.984167 [info ]: Starting dbt LSP server
+02:39:40.984225 [info ]: Connecting to LSP client on port 8000
+02:39:40.986702 [info ]: Successfully connected to LSP client
+02:39:40.986742 [info ]: Creating LSP service...
+02:39:41.122077 [info ]: Creating LSP server...
+02:39:41.122107 [info ]: Starting LSP server...
+02:39:41.210440 [info ]: Loading profiles.yml
+02:39:41.256137 [info ]: Started loading project
+02:39:41.257450 [info ]: Loading profiles.yml
+02:39:41.270003 [debug]:    Started loading packages
+02:39:41.274675 [debug]:     Loaded [  0.00s] packages
+02:39:41.275962 [info ]: Finished loading project [  0.02s]
+02:39:41.276488 [info ]: Started parsing
+02:39:41.324613 [debug]: Finished parsing models\staging\schema.yml [  0.00s]
+02:39:41.327330 [debug]: Finished parsing models\marts\core\dim_customers.sql [  0.00s]
+02:39:41.328034 [debug]: Finished parsing models\marts\core\dim_products.sql [  0.00s]
+02:39:41.329442 [debug]: Finished parsing models\marts\core\fact_orders.sql [  0.00s]
+02:39:41.330522 [debug]: Finished parsing models\marts\marketing_analytics\fct_customer_sessions.sql [  0.00s]
+02:39:41.331247 [debug]: Finished parsing models\staging\stg_customers.sql [  0.00s]
+02:39:41.331832 [debug]: Finished parsing models\staging\stg_events.sql [  0.00s]
+02:39:41.332483 [debug]: Finished parsing models\staging\stg_order_items.sql [  0.00s]
+02:39:41.333397 [debug]: Finished parsing models\staging\stg_orders.sql [  0.00s]
+02:39:41.334460 [debug]: Finished parsing models\staging\stg_products.sql [  0.00s]
+02:39:41.335552 [debug]: Finished parsing models\staging\stg_reviews.sql [  0.00s]
+02:39:41.336349 [debug]: Finished parsing models\staging\stg_sessions.sql [  0.00s]
+02:39:41.354232 [info ]: Finished parsing [  0.08s]
+02:39:41.356025 [info ]: Cached model count updated: 11 models (estimate)
+02:39:41.356046 [info ]: Cached model count updated: 11 models (accurate)
+02:39:41.356205 [info ]: Started scheduling
+02:39:41.356648 [info ]: Finished scheduling [  0.00s]
+02:39:41.356703 [debug]: Compilation - 3 nodes selected: {"model.online_ecommerce_star_schema.fct_customer_sessions", "model.online_ecommerce_star_schema.stg_events", "model.online_ecommerce_star_schema.stg_sessions"}
+02:39:41.356765 [info ]: Started scheduling
+02:39:41.357020 [info ]: Finished scheduling [  0.00s]
+02:39:41.357242 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "evocative-depot-427007-m8", schema: "online_ecommerce_star_schema_raw", table: "raw_sessions" }) and interval: None
+02:39:41.357368 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "evocative-depot-427007-m8", schema: "online_ecommerce_star_schema_raw", table: "raw_events" }) and interval: None
+02:39:41.357445 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "evocative-depot-427007-m8", schema: "online_ecommerce_star_schema_raw", table: "raw_reviews" }) and interval: None
+02:39:41.357526 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "evocative-depot-427007-m8", schema: "online_ecommerce_star_schema_raw", table: "raw_customers" }) and interval: None
+02:39:41.357601 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "evocative-depot-427007-m8", schema: "online_ecommerce_star_schema_raw", table: "raw_order_items" }) and interval: None
+02:39:41.357699 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "evocative-depot-427007-m8", schema: "online_ecommerce_star_schema_raw", table: "raw_orders" }) and interval: None
+02:39:41.357791 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "evocative-depot-427007-m8", schema: "online_ecommerce_star_schema_raw", table: "raw_products" }) and interval: None
+02:39:41.383625 [debug]: Requesting license from https://we177.us1.dbt.com/api/private/accounts/70506183141867/feature-licenses/ with 1 key IDs: ["fusion-prod-2025-11-20"]
+02:39:43.208255 [warn ]: [LicenseError (dbt1068)]: Error loading license from remote server we177.us1.dbt.com, skipping: Email not verified
+02:39:43.220235 [debug]: Requesting license from https://we177.us1.dbt.com/api/private/accounts/70506183141867/feature-licenses/ with 1 key IDs: ["fusion-prod-2025-11-20"]
+02:39:46.017186 [debug]: License check failed: Feature not licensed: 'lineage'
+02:39:46.018788 [info ]: Started building task graph
+02:39:46.019029 [info ]: Finished building task graph [  0.00s]
+02:39:46.021332 [info ]: Started rendering (3 nodes)
+02:39:46.021412 [info ]: Started model online_ecommerce_star_schema_marts.fct_customer_sessions
+02:39:46.021468 [debug]: Started rendering model online_ecommerce_star_schema_marts.fct_customer_sessions
+02:39:46.021539 [info ]: Started model online_ecommerce_star_schema_staging.stg_sessions
+02:39:46.021560 [debug]: Started rendering model online_ecommerce_star_schema_staging.stg_sessions
+02:39:46.021624 [info ]: Started model online_ecommerce_star_schema_staging.stg_events
+02:39:46.021649 [debug]: Started rendering model online_ecommerce_star_schema_staging.stg_events
+02:39:46.023801 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.stg_sessions at target\.lsp\compiled\online_ecommerce_star_schema\models\staging\stg_sessions.sql
+02:39:46.023964 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.fct_customer_sessions at target\.lsp\compiled\online_ecommerce_star_schema\models\marts\marketing_analytics\fct_customer_sessions.sql
+02:39:46.024194 [debug]: Finished rendering [  0.00s] model online_ecommerce_star_schema_staging.stg_sessions [success]
+02:39:46.024264 [info ]: Started analyzing (3 nodes)
+02:39:46.024283 [debug]: Started analyzing model online_ecommerce_star_schema_staging.stg_sessions
+02:39:46.024334 [debug]: Finished rendering [  0.00s] model online_ecommerce_star_schema_marts.fct_customer_sessions [success]
+02:39:46.024360 [debug]: Started analyzing model online_ecommerce_star_schema_marts.fct_customer_sessions
+02:39:46.026201 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.stg_events at target\.lsp\compiled\online_ecommerce_star_schema\models\staging\stg_events.sql
+02:39:46.026740 [debug]: Finished rendering [  0.01s] model online_ecommerce_star_schema_staging.stg_events [success]
+02:39:46.026773 [info ]: Finished rendering [  0.01s] (3 nodes, 0 skipped, 0 errors)
+02:39:46.026803 [debug]: Started analyzing model online_ecommerce_star_schema_staging.stg_events
+02:39:46.037443 [debug]: Finished analyzing [  0.01s] model online_ecommerce_star_schema_staging.stg_sessions [success]
+02:39:46.037486 [info ]:  Succeeded [  0.01s] model online_ecommerce_star_schema_staging.stg_sessions (view)
+02:39:46.037548 [debug]: Finished analyzing [  0.01s] model online_ecommerce_star_schema_staging.stg_events [success]
+02:39:46.037569 [info ]:  Succeeded [  0.01s] model online_ecommerce_star_schema_staging.stg_events (view)
+02:39:46.082857 [debug]: Finished analyzing [  0.06s] model online_ecommerce_star_schema_marts.fct_customer_sessions [success]
+02:39:46.082948 [info ]: Finished analyzing [  0.06s] (3 nodes, 0 skipped, 0 errors)
+02:39:46.082987 [info ]:  Succeeded [  0.06s] model online_ecommerce_star_schema_marts.fct_customer_sessions (table)
+02:39:46.089811 [info ]: Started scheduling
+02:39:46.089918 [info ]: Finished scheduling [  0.00s]
+02:39:46.091476 [info ]: Cached model count updated: 11 models (accurate)
+02:39:46.359852 [debug]: License check failed: Feature not licensed: 'lineage'
+02:39:47.753991 [info ]: Started loading project
+02:39:47.754795 [info ]: Loading profiles.yml
+02:39:47.793090 [info ]: Cached model count updated: 11 models (estimate)
+02:39:47.793106 [info ]: Cached model count updated: 11 models (accurate)
+02:39:47.793151 [info ]: Started scheduling
+02:39:47.793345 [info ]: Finished scheduling [  0.00s]
+02:39:47.793381 [debug]: Compilation - 3 nodes selected: {"model.online_ecommerce_star_schema.fct_customer_sessions", "model.online_ecommerce_star_schema.stg_events", "model.online_ecommerce_star_schema.stg_sessions"}
+02:39:47.794352 [debug]: License check failed: Feature not licensed: 'lineage'
+02:39:47.794927 [info ]: Started building task graph
+02:39:47.794973 [info ]: Finished building task graph [  0.00s]
+02:39:47.795606 [info ]: Started rendering (3 nodes)
+02:39:47.795623 [info ]: Started model online_ecommerce_star_schema_marts.fct_customer_sessions
+02:39:47.795634 [debug]: Started rendering model online_ecommerce_star_schema_marts.fct_customer_sessions
+02:39:47.795655 [info ]: Started model online_ecommerce_star_schema_staging.stg_sessions
+02:39:47.795663 [debug]: Started rendering model online_ecommerce_star_schema_staging.stg_sessions
+02:39:47.795675 [info ]: Started model online_ecommerce_star_schema_staging.stg_events
+02:39:47.795710 [debug]: Started rendering model online_ecommerce_star_schema_staging.stg_events
+02:39:47.795744 [info ]: Finished loading project [  0.04s]
+02:39:47.796213 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.fct_customer_sessions at target\.lsp\compiled\online_ecommerce_star_schema\models\marts\marketing_analytics\fct_customer_sessions.sql
+02:39:47.796270 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.stg_events at target\.lsp\compiled\online_ecommerce_star_schema\models\staging\stg_events.sql
+02:39:47.796272 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.stg_sessions at target\.lsp\compiled\online_ecommerce_star_schema\models\staging\stg_sessions.sql
+02:39:47.796281 [debug]: Finished rendering [  0.00s] model online_ecommerce_star_schema_marts.fct_customer_sessions [success]
+02:39:47.796308 [info ]: Started analyzing (3 nodes)
+02:39:47.796325 [debug]: Started analyzing model online_ecommerce_star_schema_marts.fct_customer_sessions
+02:39:47.796361 [debug]: Finished rendering [  0.00s] model online_ecommerce_star_schema_staging.stg_events [success]
+02:39:47.796392 [debug]: Started analyzing model online_ecommerce_star_schema_staging.stg_events
+02:39:47.796409 [debug]: Finished rendering [  0.00s] model online_ecommerce_star_schema_staging.stg_sessions [success]
+02:39:47.796423 [info ]: Finished rendering [  0.00s] (3 nodes, 0 skipped, 0 errors)
+02:39:47.796439 [debug]: Started analyzing model online_ecommerce_star_schema_staging.stg_sessions
+02:39:47.796663 [debug]: Finished analyzing [  0.00s] model online_ecommerce_star_schema_staging.stg_sessions [success]
+02:39:47.796676 [info ]:  Succeeded [-------] model online_ecommerce_star_schema_staging.stg_sessions (view)
+02:39:47.796721 [debug]: Finished analyzing [  0.00s] model online_ecommerce_star_schema_staging.stg_events [success]
+02:39:47.796729 [info ]:  Succeeded [-------] model online_ecommerce_star_schema_staging.stg_events (view)
+02:39:47.799859 [debug]: Finished analyzing [  0.00s] model online_ecommerce_star_schema_marts.fct_customer_sessions [success]
+02:39:47.799879 [info ]: Finished analyzing [  0.00s] (3 nodes, 0 skipped, 0 errors)
+02:39:47.799887 [info ]:  Succeeded [  0.00s] model online_ecommerce_star_schema_marts.fct_customer_sessions (table)
+02:39:47.803666 [info ]: Started scheduling
+02:39:47.803743 [info ]: Finished scheduling [  0.00s]
+02:39:47.804491 [info ]: Cached model count updated: 11 models (accurate)
+02:39:48.069861 [debug]: License check failed: Feature not licensed: 'lineage'
+02:39:49.386925 [info ]: Started loading project
+02:39:49.387772 [info ]: Loading profiles.yml
+02:39:49.421562 [info ]: Cached model count updated: 11 models (estimate)
+02:39:49.421580 [info ]: Cached model count updated: 11 models (accurate)
+02:39:49.421625 [info ]: Started scheduling
+02:39:49.421741 [info ]: Finished scheduling [  0.00s]
+02:39:49.421757 [debug]: Compilation - 11 nodes selected: {"model.online_ecommerce_star_schema.dim_customers", "model.online_ecommerce_star_schema.dim_products", "model.online_ecommerce_star_schema.fact_orders", "model.online_ecommerce_star_schema.fct_customer_sessions", "model.online_ecommerce_star_schema.stg_customers", "model.online_ecommerce_star_schema.stg_events", "model.online_ecommerce_star_schema.stg_order_items", "model.online_ecommerce_star_schema.stg_orders", "model.online_ecommerce_star_schema.stg_products", "model.online_ecommerce_star_schema.stg_reviews", "model.online_ecommerce_star_schema.stg_sessions"}
+02:39:49.422694 [debug]: License check failed: Feature not licensed: 'lineage'
+02:39:49.422864 [debug]:    Started downloading relations (1 items)
+02:39:49.422955 [info ]: Finished loading project [  0.04s]
+02:39:49.443977 [debug]:     Failed [  0.02s] downloading relations (error: [BigQuery] credentials: could not parse key: private key should be a PEM or plain PKCS1 or PKCS8: asn1: structure error: tags don't match (16 vs {class:0 tag:13 length:45 isCompound:true}) {optional:false explicit:false application:false private:false defaultValue:<nil> tag:<nil> stringType:0 timeType:0 set:false omitEmpty:false} pkcs1PrivateKey @2)
+02:39:49.444486 [info ]: Started building task graph
+02:39:49.444651 [info ]: Finished building task graph [  0.00s]
+02:39:49.445784 [info ]: Started rendering (11 nodes)
+02:39:49.445803 [info ]: Started model online_ecommerce_star_schema_staging.stg_reviews
+02:39:49.445814 [debug]: Started rendering model online_ecommerce_star_schema_staging.stg_reviews
+02:39:49.445831 [info ]: Started model online_ecommerce_star_schema_marts.fct_customer_sessions
+02:39:49.445864 [debug]: Started rendering model online_ecommerce_star_schema_marts.fct_customer_sessions
+02:39:49.445884 [info ]: Started model online_ecommerce_star_schema_staging.stg_sessions
+02:39:49.445895 [debug]: Started rendering model online_ecommerce_star_schema_staging.stg_sessions
+02:39:49.445922 [info ]: Started model online_ecommerce_star_schema_staging.stg_events
+02:39:49.445943 [debug]: Started rendering model online_ecommerce_star_schema_staging.stg_events
+02:39:49.445973 [info ]: Started model online_ecommerce_star_schema_marts.fact_orders
+02:39:49.445993 [debug]: Started rendering model online_ecommerce_star_schema_marts.fact_orders
+02:39:49.446022 [info ]: Started model online_ecommerce_star_schema_staging.stg_orders
+02:39:49.446041 [debug]: Started rendering model online_ecommerce_star_schema_staging.stg_orders
+02:39:49.446068 [info ]: Started model online_ecommerce_star_schema_staging.stg_order_items
+02:39:49.446087 [debug]: Started rendering model online_ecommerce_star_schema_staging.stg_order_items
+02:39:49.446117 [info ]: Started model online_ecommerce_star_schema_marts.dim_products
+02:39:49.446135 [debug]: Started rendering model online_ecommerce_star_schema_marts.dim_products
+02:39:49.446156 [info ]: Started model online_ecommerce_star_schema_staging.stg_products
+02:39:49.446178 [debug]: Started rendering model online_ecommerce_star_schema_staging.stg_products
+02:39:49.446205 [info ]: Started model online_ecommerce_star_schema_marts.dim_customers
+02:39:49.446225 [debug]: Started rendering model online_ecommerce_star_schema_marts.dim_customers
+02:39:49.446250 [info ]: Started model online_ecommerce_star_schema_staging.stg_customers
+02:39:49.446276 [debug]: Started rendering model online_ecommerce_star_schema_staging.stg_customers
+02:39:49.446426 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.fct_customer_sessions at target\.lsp\compiled\online_ecommerce_star_schema\models\marts\marketing_analytics\fct_customer_sessions.sql
+02:39:49.446529 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.stg_events at target\.lsp\compiled\online_ecommerce_star_schema\models\staging\stg_events.sql
+02:39:49.446533 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.stg_sessions at target\.lsp\compiled\online_ecommerce_star_schema\models\staging\stg_sessions.sql
+02:39:49.447014 [debug]: Finished rendering [  0.00s] model online_ecommerce_star_schema_staging.stg_events [success]
+02:39:49.447083 [info ]: Started analyzing (11 nodes)
+02:39:49.447107 [debug]: Started analyzing model online_ecommerce_star_schema_staging.stg_events
+02:39:49.447140 [debug]: Finished rendering [  0.00s] model online_ecommerce_star_schema_staging.stg_sessions [success]
+02:39:49.447167 [debug]: Started analyzing model online_ecommerce_star_schema_staging.stg_sessions
+02:39:49.447195 [debug]: Finished rendering [  0.00s] model online_ecommerce_star_schema_marts.fct_customer_sessions [success]
+02:39:49.447219 [debug]: Started analyzing model online_ecommerce_star_schema_marts.fct_customer_sessions
+02:39:49.447569 [debug]: Finished analyzing [  0.00s] model online_ecommerce_star_schema_staging.stg_events [success]
+02:39:49.447592 [info ]:  Succeeded [  0.00s] model online_ecommerce_star_schema_staging.stg_events (view)
+02:39:49.447684 [debug]: Finished analyzing [  0.00s] model online_ecommerce_star_schema_staging.stg_sessions [success]
+02:39:49.447708 [info ]:  Succeeded [  0.00s] model online_ecommerce_star_schema_staging.stg_sessions (view)
+02:39:49.449429 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.dim_customers at target\.lsp\compiled\online_ecommerce_star_schema\models\marts\core\dim_customers.sql
+02:39:49.449566 [debug]: Finished rendering [  0.00s] model online_ecommerce_star_schema_marts.dim_customers [success]
+02:39:49.449611 [debug]: Started analyzing model online_ecommerce_star_schema_marts.dim_customers
+02:39:49.449936 [debug]: Finished analyzing [  0.00s] model online_ecommerce_star_schema_marts.dim_customers [success]
+02:39:49.449963 [info ]:  Succeeded [  0.00s] model online_ecommerce_star_schema_marts.dim_customers (table)
+02:39:49.450274 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.dim_products at target\.lsp\compiled\online_ecommerce_star_schema\models\marts\core\dim_products.sql
+02:39:49.450265 [error]: [DbDriverFailed (dbt1308)]: [BigQuery] credentials: could not parse key: private key should be a PEM or plain PKCS1 or PKCS8: asn1: structure error: tags don't match (16 vs {class:0 tag:13 length:45 isCompound:true}) {optional:false explicit:false application:false private:false defaultValue:<nil> tag:<nil> stringType:0 timeType:0 set:false omitEmpty:false} pkcs1PrivateKey @2
+(in models\marts\core\fact_orders.sql:66:7)
+  --> models\marts\core\fact_orders.sql:66:7
+02:39:49.450445 [debug]: Started analyzing model online_ecommerce_star_schema_marts.fact_orders
+02:39:49.450479 [debug]: Finished analyzing [  0.00s] model online_ecommerce_star_schema_marts.fact_orders [skipped]
+02:39:49.450506 [info ]:     Failed [  0.00s] model online_ecommerce_star_schema_marts.fact_orders (table)
+02:39:49.450572 [debug]: Finished rendering [  0.00s] model online_ecommerce_star_schema_marts.fact_orders [error]
+02:39:49.450630 [debug]: Finished rendering [  0.00s] model online_ecommerce_star_schema_marts.dim_products [success]
+02:39:49.450689 [debug]: Started analyzing model online_ecommerce_star_schema_marts.dim_products
+02:39:49.451094 [debug]: Finished analyzing [  0.00s] model online_ecommerce_star_schema_marts.dim_products [success]
+02:39:49.451152 [info ]:  Succeeded [  0.00s] model online_ecommerce_star_schema_marts.dim_products (table)
+02:39:49.454424 [debug]: Finished analyzing [  0.01s] model online_ecommerce_star_schema_marts.fct_customer_sessions [success]
+02:39:49.454471 [info ]:  Succeeded [  0.01s] model online_ecommerce_star_schema_marts.fct_customer_sessions (table)
+02:39:49.454658 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.stg_order_items at target\.lsp\compiled\online_ecommerce_star_schema\models\staging\stg_order_items.sql
+02:39:49.454885 [debug]: Finished rendering [  0.01s] model online_ecommerce_star_schema_staging.stg_order_items [success]
+02:39:49.455367 [debug]: Started analyzing model online_ecommerce_star_schema_staging.stg_order_items
+02:39:49.455904 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.stg_products at target\.lsp\compiled\online_ecommerce_star_schema\models\staging\stg_products.sql
+02:39:49.456307 [debug]: Finished rendering [  0.01s] model online_ecommerce_star_schema_staging.stg_products [success]
+02:39:49.456392 [debug]: Started analyzing model online_ecommerce_star_schema_staging.stg_products
+02:39:49.456802 [debug]: Finished analyzing [  0.00s] model online_ecommerce_star_schema_staging.stg_order_items [success]
+02:39:49.456829 [info ]:  Succeeded [  0.01s] model online_ecommerce_star_schema_staging.stg_order_items (view)
+02:39:49.457255 [debug]: Finished analyzing [  0.00s] model online_ecommerce_star_schema_staging.stg_products [success]
+02:39:49.457284 [info ]:  Succeeded [  0.01s] model online_ecommerce_star_schema_staging.stg_products (view)
+02:39:49.457944 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.stg_reviews at target\.lsp\compiled\online_ecommerce_star_schema\models\staging\stg_reviews.sql
+02:39:49.458152 [debug]: Finished rendering [  0.01s] model online_ecommerce_star_schema_staging.stg_reviews [success]
+02:39:49.458270 [debug]: Started analyzing model online_ecommerce_star_schema_staging.stg_reviews
+02:39:49.458688 [debug]: Finished analyzing [  0.00s] model online_ecommerce_star_schema_staging.stg_reviews [success]
+02:39:49.458714 [info ]:  Succeeded [  0.01s] model online_ecommerce_star_schema_staging.stg_reviews (view)
+02:39:49.458982 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.stg_orders at target\.lsp\compiled\online_ecommerce_star_schema\models\staging\stg_orders.sql
+02:39:49.459771 [debug]: Finished rendering [  0.01s] model online_ecommerce_star_schema_staging.stg_orders [success]
+02:39:49.459857 [debug]: Started analyzing model online_ecommerce_star_schema_staging.stg_orders
+02:39:49.460496 [debug]: Compiled SQL for node model.online_ecommerce_star_schema.stg_customers at target\.lsp\compiled\online_ecommerce_star_schema\models\staging\stg_customers.sql
+02:39:49.461110 [debug]: Finished analyzing [  0.00s] model online_ecommerce_star_schema_staging.stg_orders [success]
+02:39:49.461158 [info ]:  Succeeded [  0.01s] model online_ecommerce_star_schema_staging.stg_orders (view)
+02:39:49.461215 [debug]: Finished rendering [  0.01s] model online_ecommerce_star_schema_staging.stg_customers [success]
+02:39:49.461251 [info ]: Finished rendering [  0.02s] (11 nodes, 0 skipped, 1 errors)
+02:39:49.461276 [debug]: Started analyzing model online_ecommerce_star_schema_staging.stg_customers
+02:39:49.461572 [debug]: Finished analyzing [  0.00s] model online_ecommerce_star_schema_staging.stg_customers [success]
+02:39:49.461592 [info ]: Finished analyzing [  0.01s] (11 nodes, 1 skipped, 0 errors)
+02:39:49.461607 [info ]:  Succeeded [  0.01s] model online_ecommerce_star_schema_staging.stg_customers (view)
+02:39:49.471328 [info ]: Started scheduling
+02:39:49.471389 [info ]: Finished scheduling [  0.00s]
+02:39:49.472182 [info ]: Cached model count updated: 11 models (accurate)
+02:39:49.732403 [debug]: License check failed: Feature not licensed: 'lineage'
+02:40:20.855453 [debug]: License check failed: Feature not licensed: 'lineage'
+02:42:30.985217 [debug]: License check failed: Feature not licensed: 'lineage'
+02:42:45.545562 [debug]: License check failed: Feature not licensed: 'lineage'
+03:00:42.688004 [debug]: License check failed: Feature not licensed: 'lineage'
+03:02:36.908461 [debug]: License check failed: Feature not licensed: 'lineage'
+03:02:40.624245 [debug]: License check failed: Feature not licensed: 'lineage'
+03:03:14.396007 [debug]: License check failed: Feature not licensed: 'lineage'
+03:04:11.584421 [debug]: License check failed: Feature not licensed: 'lineage'

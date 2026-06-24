@@ -1,4 +1,4 @@
-with source as (
+with raw_source as (
     select * from {{ source('bq_raw', 'raw_orders') }}
 )
 
@@ -12,5 +12,5 @@ select
     cast(total_usd as numeric) as total_amount_usd,
     cast(country as string) as order_country,
     device as device_type,
-    source
-from source
+    source as   marketing_acquisition_source
+from raw_source
