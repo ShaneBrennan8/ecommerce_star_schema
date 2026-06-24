@@ -11220,3 +11220,560 @@ left join session_event_aggregation sea on s.session_id = sea.session_id
 {"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019ef77f-42e6-7940-92b3-be6bd5a73d63","level":"debug","msg":"Requesting license from https://we177.us1.dbt.com/api/private/accounts/70506183141867/feature-licenses/ with 1 key IDs: [\"fusion-prod-2025-11-20\"]","name":"Generic","pid":19572,"thread":"tokio-rt-worker","ts":"2026-06-24T02:39:34.201519Z"}}
 {"data":{"columns":[],"is_inline":true,"node_name":"license_info","output_format":"json","preview":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","unique_id":"license.info"},"info":{"category":"","code":"Q041","extra":{},"invocation_id":"019ef77f-42e6-7940-92b3-be6bd5a73d63","level":"info","msg":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","name":"ShowNode","pid":19572,"thread":"tokio-rt-worker","ts":"2026-06-24T02:39:35.308710Z"}}
 {"data":{"completed_at":"2026-06-24T02:39:35.340753Z","elapsed":2.239393472671509,"success":true},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019ef77f-42e6-7940-92b3-be6bd5a73d63","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'license' with 1 warning [2.2s]","name":"CommandCompleted","pid":19572,"thread":"tokio-rt-worker","ts":"2026-06-24T02:39:35.340988Z"}}
+[0m13:08:22.504480 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002075D6D1340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002075D6D03E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002075D6D0E00>]}
+
+
+============================== 13:08:22.510464 | f618f867-6013-4c96-bad5-bdc7f6748f1a ==============================
+[0m13:08:22.510464 [info ] [MainThread]: Running with dbt=1.7.18
+[0m13:08:22.511462 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\shane\\OneDrive\\Documents\\GitHub\\online_ecommerce_star_schema', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\shane\\OneDrive\\Documents\\GitHub\\online_ecommerce_star_schema\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m13:08:27.434940 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f618f867-6013-4c96-bad5-bdc7f6748f1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002075D6D1310>]}
+[0m13:08:27.549772 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f618f867-6013-4c96-bad5-bdc7f6748f1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002076FCE5070>]}
+[0m13:08:27.552764 [info ] [MainThread]: Registered adapter: bigquery=1.7.9
+[0m13:08:27.578695 [debug] [MainThread]: checksum: 7ef98830ab3f0215d011ffa635e2417c6313d5b77f40f33d534bad4eb8784f08, vars: {}, profile: , target: , version: 1.7.18
+[0m13:08:28.824928 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m13:08:28.825923 [debug] [MainThread]: Partial parsing: updated file: online_ecommerce_star_schema://models\staging\stg_orders.sql
+[0m13:08:28.826921 [debug] [MainThread]: Partial parsing: updated file: online_ecommerce_star_schema://models\marts\core\fact_orders.sql
+[0m13:08:29.095512 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f618f867-6013-4c96-bad5-bdc7f6748f1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002077026BC20>]}
+[0m13:08:29.117249 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f618f867-6013-4c96-bad5-bdc7f6748f1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020770116F30>]}
+[0m13:08:29.118248 [info ] [MainThread]: Found 11 models, 7 sources, 0 exposures, 0 metrics, 454 macros, 0 groups, 0 semantic models
+[0m13:08:29.119247 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f618f867-6013-4c96-bad5-bdc7f6748f1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207702B7DA0>]}
+[0m13:08:29.123233 [info ] [MainThread]: 
+[0m13:08:29.125231 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m13:08:29.129218 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_evocative-depot-427007-m8'
+[0m13:08:29.130215 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:08:31.446352 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:08:33.383253 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_evocative-depot-427007-m8_online_ecommerce_star_schema_staging'
+[0m13:08:33.383253 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:08:35.082649 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_evocative-depot-427007-m8_online_ecommerce_star_schema_staging, now list_evocative-depot-427007-m8_online_ecommerce_star_schema_marts)
+[0m13:08:35.082649 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:08:36.778439 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f618f867-6013-4c96-bad5-bdc7f6748f1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020770170650>]}
+[0m13:08:36.780515 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m13:08:36.780567 [info ] [MainThread]: 
+[0m13:08:36.792223 [debug] [Thread-5 (]: Began running node model.online_ecommerce_star_schema.stg_customers
+[0m13:08:36.792223 [info ] [Thread-5 (]: 1 of 11 START sql view model online_ecommerce_star_schema_staging.stg_customers  [RUN]
+[0m13:08:36.794218 [debug] [Thread-5 (]: Acquiring new bigquery connection 'model.online_ecommerce_star_schema.stg_customers'
+[0m13:08:36.795891 [debug] [Thread-5 (]: Began compiling node model.online_ecommerce_star_schema.stg_customers
+[0m13:08:36.806872 [debug] [Thread-5 (]: Writing injected SQL for node "model.online_ecommerce_star_schema.stg_customers"
+[0m13:08:36.807835 [debug] [Thread-5 (]: Timing info for model.online_ecommerce_star_schema.stg_customers (compile): 13:08:36.796894 => 13:08:36.807835
+[0m13:08:36.808833 [debug] [Thread-5 (]: Began executing node model.online_ecommerce_star_schema.stg_customers
+[0m13:08:36.853749 [debug] [Thread-5 (]: Writing runtime sql for node "model.online_ecommerce_star_schema.stg_customers"
+[0m13:08:36.855742 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m13:08:36.906628 [debug] [Thread-5 (]: On model.online_ecommerce_star_schema.stg_customers: /* {"app": "dbt", "dbt_version": "1.7.18", "profile_name": "shane_bigquery_project", "target_name": "dev", "node_id": "model.online_ecommerce_star_schema.stg_customers"} */
+
+
+  create or replace view `evocative-depot-427007-m8`.`online_ecommerce_star_schema_staging`.`stg_customers`
+  OPTIONS()
+  as with source as (
+    select * from `evocative-depot-427007-m8`.`online_ecommerce_star_schema_raw`.`raw_customers`
+)
+
+select
+    cast(customer_id as string) as customer_id,
+    cast(name as string) as customer_name, 
+    cast(email as string) as email,
+    cast(country as string) as country,
+    cast(age as int64) as age,
+    cast(signup_date as date) as signup_date,
+    cast(marketing_opt_in as bool) as marketing_opt_in
+from source;
+
+
+[0m13:08:38.983173 [debug] [Thread-5 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:40fdf4d5-c66b-412d-b46c-4e0495c98f87&page=queryresults
+[0m13:08:39.902742 [debug] [Thread-5 (]: Timing info for model.online_ecommerce_star_schema.stg_customers (execute): 13:08:36.808833 => 13:08:39.902742
+[0m13:08:39.911436 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f618f867-6013-4c96-bad5-bdc7f6748f1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207700CEEA0>]}
+[0m13:08:39.912859 [info ] [Thread-5 (]: 1 of 11 OK created sql view model online_ecommerce_star_schema_staging.stg_customers  [[32mCREATE VIEW (0 processed)[0m in 3.11s]
+[0m13:08:39.912859 [debug] [Thread-5 (]: Finished running node model.online_ecommerce_star_schema.stg_customers
+[0m13:08:39.912859 [debug] [Thread-5 (]: Began running node model.online_ecommerce_star_schema.stg_events
+[0m13:08:39.912859 [info ] [Thread-5 (]: 2 of 11 START sql view model online_ecommerce_star_schema_staging.stg_events ... [RUN]
+[0m13:08:39.912859 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.online_ecommerce_star_schema.stg_customers, now model.online_ecommerce_star_schema.stg_events)
+[0m13:08:39.921410 [debug] [Thread-5 (]: Began compiling node model.online_ecommerce_star_schema.stg_events
+[0m13:08:39.925762 [debug] [Thread-5 (]: Writing injected SQL for node "model.online_ecommerce_star_schema.stg_events"
+[0m13:08:39.926758 [debug] [Thread-5 (]: Timing info for model.online_ecommerce_star_schema.stg_events (compile): 13:08:39.922763 => 13:08:39.926758
+[0m13:08:39.927755 [debug] [Thread-5 (]: Began executing node model.online_ecommerce_star_schema.stg_events
+[0m13:08:39.936683 [debug] [Thread-5 (]: Writing runtime sql for node "model.online_ecommerce_star_schema.stg_events"
+[0m13:08:39.940669 [debug] [Thread-5 (]: Opening a new connection, currently in state closed
+[0m13:08:39.978520 [debug] [Thread-5 (]: On model.online_ecommerce_star_schema.stg_events: /* {"app": "dbt", "dbt_version": "1.7.18", "profile_name": "shane_bigquery_project", "target_name": "dev", "node_id": "model.online_ecommerce_star_schema.stg_events"} */
+
+
+  create or replace view `evocative-depot-427007-m8`.`online_ecommerce_star_schema_staging`.`stg_events`
+  OPTIONS()
+  as with source as (
+    select * from `evocative-depot-427007-m8`.`online_ecommerce_star_schema_raw`.`raw_events`
+)
+
+select
+    cast(event_id as string) as event_id,
+    cast(session_id as string) as session_id,
+    cast(event_type as string) as event_type,
+    cast(timestamp as timestamp) as event_timestamp,
+    product_id, 
+    qty,
+    cart_size,
+    payment,
+    discount_pct,
+    amount_usd
+
+from source;
+
+
+[0m13:08:42.425808 [debug] [Thread-5 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:3a21ecf1-47e4-4edb-99fa-1600cd0cec64&page=queryresults
+[0m13:08:43.104555 [debug] [Thread-5 (]: Timing info for model.online_ecommerce_star_schema.stg_events (execute): 13:08:39.929750 => 13:08:43.103558
+[0m13:08:43.105759 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f618f867-6013-4c96-bad5-bdc7f6748f1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002077038DBE0>]}
+[0m13:08:43.106757 [info ] [Thread-5 (]: 2 of 11 OK created sql view model online_ecommerce_star_schema_staging.stg_events  [[32mCREATE VIEW (0 processed)[0m in 3.19s]
+[0m13:08:43.107754 [debug] [Thread-5 (]: Finished running node model.online_ecommerce_star_schema.stg_events
+[0m13:08:43.107754 [debug] [Thread-5 (]: Began running node model.online_ecommerce_star_schema.stg_order_items
+[0m13:08:43.108752 [info ] [Thread-5 (]: 3 of 11 START sql view model online_ecommerce_star_schema_staging.stg_order_items  [RUN]
+[0m13:08:43.111023 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.online_ecommerce_star_schema.stg_events, now model.online_ecommerce_star_schema.stg_order_items)
+[0m13:08:43.112024 [debug] [Thread-5 (]: Began compiling node model.online_ecommerce_star_schema.stg_order_items
+[0m13:08:43.118629 [debug] [Thread-5 (]: Writing injected SQL for node "model.online_ecommerce_star_schema.stg_order_items"
+[0m13:08:43.120625 [debug] [Thread-5 (]: Timing info for model.online_ecommerce_star_schema.stg_order_items (compile): 13:08:43.112024 => 13:08:43.119626
+[0m13:08:43.121620 [debug] [Thread-5 (]: Began executing node model.online_ecommerce_star_schema.stg_order_items
+[0m13:08:43.125940 [debug] [Thread-5 (]: Writing runtime sql for node "model.online_ecommerce_star_schema.stg_order_items"
+[0m13:08:43.127937 [debug] [Thread-5 (]: Opening a new connection, currently in state closed
+[0m13:08:43.179801 [debug] [Thread-5 (]: On model.online_ecommerce_star_schema.stg_order_items: /* {"app": "dbt", "dbt_version": "1.7.18", "profile_name": "shane_bigquery_project", "target_name": "dev", "node_id": "model.online_ecommerce_star_schema.stg_order_items"} */
+
+
+  create or replace view `evocative-depot-427007-m8`.`online_ecommerce_star_schema_staging`.`stg_order_items`
+  OPTIONS()
+  as with source as (
+    select * from `evocative-depot-427007-m8`.`online_ecommerce_star_schema_raw`.`raw_order_items`
+)
+
+select
+    cast(order_id as string) as order_id,
+    generate_uuid() as order_id_secondary, -- Generates a clean key if missing
+    cast(product_id as string) as product_id,
+    unit_price_usd,
+    cast(quantity as int64) as quantity,
+    cast(line_total_usd as float64) as line_total_usd
+
+from source;
+
+
+[0m13:08:45.185443 [debug] [Thread-5 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:ad3b0ec6-172e-4cd7-9b86-6642933e6c3b&page=queryresults
+[0m13:08:45.954641 [debug] [Thread-5 (]: Timing info for model.online_ecommerce_star_schema.stg_order_items (execute): 13:08:43.121620 => 13:08:45.954641
+[0m13:08:45.954641 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f618f867-6013-4c96-bad5-bdc7f6748f1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207703E1D00>]}
+[0m13:08:45.954641 [info ] [Thread-5 (]: 3 of 11 OK created sql view model online_ecommerce_star_schema_staging.stg_order_items  [[32mCREATE VIEW (0 processed)[0m in 2.84s]
+[0m13:08:45.954641 [debug] [Thread-5 (]: Finished running node model.online_ecommerce_star_schema.stg_order_items
+[0m13:08:45.970132 [debug] [Thread-5 (]: Began running node model.online_ecommerce_star_schema.stg_orders
+[0m13:08:45.970132 [info ] [Thread-5 (]: 4 of 11 START sql view model online_ecommerce_star_schema_staging.stg_orders ... [RUN]
+[0m13:08:45.970132 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.online_ecommerce_star_schema.stg_order_items, now model.online_ecommerce_star_schema.stg_orders)
+[0m13:08:45.970132 [debug] [Thread-5 (]: Began compiling node model.online_ecommerce_star_schema.stg_orders
+[0m13:08:45.970132 [debug] [Thread-5 (]: Writing injected SQL for node "model.online_ecommerce_star_schema.stg_orders"
+[0m13:08:45.970132 [debug] [Thread-5 (]: Timing info for model.online_ecommerce_star_schema.stg_orders (compile): 13:08:45.970132 => 13:08:45.970132
+[0m13:08:45.970132 [debug] [Thread-5 (]: Began executing node model.online_ecommerce_star_schema.stg_orders
+[0m13:08:45.991477 [debug] [Thread-5 (]: Writing runtime sql for node "model.online_ecommerce_star_schema.stg_orders"
+[0m13:08:45.993977 [debug] [Thread-5 (]: Opening a new connection, currently in state closed
+[0m13:08:46.026085 [debug] [Thread-5 (]: On model.online_ecommerce_star_schema.stg_orders: /* {"app": "dbt", "dbt_version": "1.7.18", "profile_name": "shane_bigquery_project", "target_name": "dev", "node_id": "model.online_ecommerce_star_schema.stg_orders"} */
+
+
+  create or replace view `evocative-depot-427007-m8`.`online_ecommerce_star_schema_staging`.`stg_orders`
+  OPTIONS()
+  as with raw_source as (
+    select * from `evocative-depot-427007-m8`.`online_ecommerce_star_schema_raw`.`raw_orders`
+)
+
+select
+    cast(order_id as string) as order_id,
+    cast(customer_id as string) as customer_id,
+    cast(order_time as datetime) as order_datetime, 
+    payment_method,
+    discount_pct,
+    cast(subtotal_usd as numeric) as subtotal_usd,
+    cast(total_usd as numeric) as total_amount_usd,
+    cast(country as string) as order_country,
+    device as device_type,
+    source as   marketing_acquisition_source
+from raw_source;
+
+
+[0m13:08:48.074272 [debug] [Thread-5 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:31851314-a704-4a88-b88f-691e29350078&page=queryresults
+[0m13:08:48.766350 [debug] [Thread-5 (]: Timing info for model.online_ecommerce_star_schema.stg_orders (execute): 13:08:45.970132 => 13:08:48.766350
+[0m13:08:48.768658 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f618f867-6013-4c96-bad5-bdc7f6748f1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002076FC55490>]}
+[0m13:08:48.769128 [info ] [Thread-5 (]: 4 of 11 OK created sql view model online_ecommerce_star_schema_staging.stg_orders  [[32mCREATE VIEW (0 processed)[0m in 2.80s]
+[0m13:08:48.769128 [debug] [Thread-5 (]: Finished running node model.online_ecommerce_star_schema.stg_orders
+[0m13:08:48.769128 [debug] [Thread-5 (]: Began running node model.online_ecommerce_star_schema.stg_products
+[0m13:08:48.769128 [info ] [Thread-5 (]: 5 of 11 START sql view model online_ecommerce_star_schema_staging.stg_products . [RUN]
+[0m13:08:48.769128 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.online_ecommerce_star_schema.stg_orders, now model.online_ecommerce_star_schema.stg_products)
+[0m13:08:48.773722 [debug] [Thread-5 (]: Began compiling node model.online_ecommerce_star_schema.stg_products
+[0m13:08:48.777715 [debug] [Thread-5 (]: Writing injected SQL for node "model.online_ecommerce_star_schema.stg_products"
+[0m13:08:48.779705 [debug] [Thread-5 (]: Timing info for model.online_ecommerce_star_schema.stg_products (compile): 13:08:48.774719 => 13:08:48.778713
+[0m13:08:48.779705 [debug] [Thread-5 (]: Began executing node model.online_ecommerce_star_schema.stg_products
+[0m13:08:48.784728 [debug] [Thread-5 (]: Writing runtime sql for node "model.online_ecommerce_star_schema.stg_products"
+[0m13:08:48.785690 [debug] [Thread-5 (]: Opening a new connection, currently in state closed
+[0m13:08:48.809508 [debug] [Thread-5 (]: On model.online_ecommerce_star_schema.stg_products: /* {"app": "dbt", "dbt_version": "1.7.18", "profile_name": "shane_bigquery_project", "target_name": "dev", "node_id": "model.online_ecommerce_star_schema.stg_products"} */
+
+
+  create or replace view `evocative-depot-427007-m8`.`online_ecommerce_star_schema_staging`.`stg_products`
+  OPTIONS()
+  as with source as (
+    select * from `evocative-depot-427007-m8`.`online_ecommerce_star_schema_raw`.`raw_products`
+)
+
+select
+    cast(product_id as string) as product_id,
+    cast(name as string) as product_name, 
+    cast(category as string) as category,
+    cast(price_usd as numeric) as price,
+    cast(cost_usd as numeric) as cost_usd,
+    cast(margin_usd as numeric) as margin_usd
+    --cast(available_stock as int64) as available_stock, leaving as placeholder 
+from source;
+
+
+[0m13:08:50.993410 [debug] [Thread-5 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:65268b8a-56b7-48b5-822b-cd7bc93530d3&page=queryresults
+[0m13:08:51.711124 [debug] [Thread-5 (]: Timing info for model.online_ecommerce_star_schema.stg_products (execute): 13:08:48.780739 => 13:08:51.711124
+[0m13:08:51.711124 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f618f867-6013-4c96-bad5-bdc7f6748f1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020770404DD0>]}
+[0m13:08:51.711124 [info ] [Thread-5 (]: 5 of 11 OK created sql view model online_ecommerce_star_schema_staging.stg_products  [[32mCREATE VIEW (0 processed)[0m in 2.94s]
+[0m13:08:51.711124 [debug] [Thread-5 (]: Finished running node model.online_ecommerce_star_schema.stg_products
+[0m13:08:51.711124 [debug] [Thread-5 (]: Began running node model.online_ecommerce_star_schema.stg_reviews
+[0m13:08:51.711124 [info ] [Thread-5 (]: 6 of 11 START sql view model online_ecommerce_star_schema_staging.stg_reviews .. [RUN]
+[0m13:08:51.711124 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.online_ecommerce_star_schema.stg_products, now model.online_ecommerce_star_schema.stg_reviews)
+[0m13:08:51.711124 [debug] [Thread-5 (]: Began compiling node model.online_ecommerce_star_schema.stg_reviews
+[0m13:08:51.711124 [debug] [Thread-5 (]: Writing injected SQL for node "model.online_ecommerce_star_schema.stg_reviews"
+[0m13:08:51.711124 [debug] [Thread-5 (]: Timing info for model.online_ecommerce_star_schema.stg_reviews (compile): 13:08:51.711124 => 13:08:51.711124
+[0m13:08:51.711124 [debug] [Thread-5 (]: Began executing node model.online_ecommerce_star_schema.stg_reviews
+[0m13:08:51.730623 [debug] [Thread-5 (]: Writing runtime sql for node "model.online_ecommerce_star_schema.stg_reviews"
+[0m13:08:51.731767 [debug] [Thread-5 (]: Opening a new connection, currently in state closed
+[0m13:08:51.772866 [debug] [Thread-5 (]: On model.online_ecommerce_star_schema.stg_reviews: /* {"app": "dbt", "dbt_version": "1.7.18", "profile_name": "shane_bigquery_project", "target_name": "dev", "node_id": "model.online_ecommerce_star_schema.stg_reviews"} */
+
+
+  create or replace view `evocative-depot-427007-m8`.`online_ecommerce_star_schema_staging`.`stg_reviews`
+  OPTIONS()
+  as with source as (
+    select * from `evocative-depot-427007-m8`.`online_ecommerce_star_schema_raw`.`raw_reviews`
+)
+
+select
+    cast(review_id as string) as review_id,
+    cast(order_id as string) as order_id,
+    cast(product_id as string) as product_id,
+    cast(rating as int64) as rating,
+    cast(review_text as string) as review_text,
+    cast(review_time as date) as review_date
+from source;
+
+
+[0m13:08:53.770454 [debug] [Thread-5 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:233eded3-a099-4c73-9d97-1cda3a3d74ce&page=queryresults
+[0m13:08:54.553535 [debug] [Thread-5 (]: Timing info for model.online_ecommerce_star_schema.stg_reviews (execute): 13:08:51.711124 => 13:08:54.553535
+[0m13:08:54.553535 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f618f867-6013-4c96-bad5-bdc7f6748f1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002077034ED80>]}
+[0m13:08:54.569058 [info ] [Thread-5 (]: 6 of 11 OK created sql view model online_ecommerce_star_schema_staging.stg_reviews  [[32mCREATE VIEW (0 processed)[0m in 2.84s]
+[0m13:08:54.569058 [debug] [Thread-5 (]: Finished running node model.online_ecommerce_star_schema.stg_reviews
+[0m13:08:54.569058 [debug] [Thread-5 (]: Began running node model.online_ecommerce_star_schema.stg_sessions
+[0m13:08:54.569058 [info ] [Thread-5 (]: 7 of 11 START sql view model online_ecommerce_star_schema_staging.stg_sessions . [RUN]
+[0m13:08:54.569058 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.online_ecommerce_star_schema.stg_reviews, now model.online_ecommerce_star_schema.stg_sessions)
+[0m13:08:54.569058 [debug] [Thread-5 (]: Began compiling node model.online_ecommerce_star_schema.stg_sessions
+[0m13:08:54.569058 [debug] [Thread-5 (]: Writing injected SQL for node "model.online_ecommerce_star_schema.stg_sessions"
+[0m13:08:54.569058 [debug] [Thread-5 (]: Timing info for model.online_ecommerce_star_schema.stg_sessions (compile): 13:08:54.569058 => 13:08:54.569058
+[0m13:08:54.569058 [debug] [Thread-5 (]: Began executing node model.online_ecommerce_star_schema.stg_sessions
+[0m13:08:54.584676 [debug] [Thread-5 (]: Writing runtime sql for node "model.online_ecommerce_star_schema.stg_sessions"
+[0m13:08:54.586323 [debug] [Thread-5 (]: Opening a new connection, currently in state closed
+[0m13:08:54.621699 [debug] [Thread-5 (]: On model.online_ecommerce_star_schema.stg_sessions: /* {"app": "dbt", "dbt_version": "1.7.18", "profile_name": "shane_bigquery_project", "target_name": "dev", "node_id": "model.online_ecommerce_star_schema.stg_sessions"} */
+
+
+  create or replace view `evocative-depot-427007-m8`.`online_ecommerce_star_schema_staging`.`stg_sessions`
+  OPTIONS()
+  as with raw_source as ( -- had to rename this to avoid confusion with the source() function
+    select * from `evocative-depot-427007-m8`.`online_ecommerce_star_schema_raw`.`raw_sessions`
+)
+
+select
+    cast(session_id as string) as session_id,
+    cast(customer_id as string) as customer_id,
+    cast(start_time as datetime) as session_start_timestamp, 
+    cast(device as string) as device_type,
+    cast(source as string) as traffic_source, 
+    cast(country as string) as country
+from raw_source;
+
+
+[0m13:08:56.557466 [debug] [Thread-5 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:1e8f9ed2-3698-45e0-b717-3286fce550be&page=queryresults
+[0m13:08:57.296747 [debug] [Thread-5 (]: Timing info for model.online_ecommerce_star_schema.stg_sessions (execute): 13:08:54.569058 => 13:08:57.296747
+[0m13:08:57.297746 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f618f867-6013-4c96-bad5-bdc7f6748f1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020770414E90>]}
+[0m13:08:57.297746 [info ] [Thread-5 (]: 7 of 11 OK created sql view model online_ecommerce_star_schema_staging.stg_sessions  [[32mCREATE VIEW (0 processed)[0m in 2.73s]
+[0m13:08:57.298709 [debug] [Thread-5 (]: Finished running node model.online_ecommerce_star_schema.stg_sessions
+[0m13:08:57.299720 [debug] [Thread-5 (]: Began running node model.online_ecommerce_star_schema.dim_customers
+[0m13:08:57.300703 [info ] [Thread-5 (]: 8 of 11 START sql table model online_ecommerce_star_schema_marts.dim_customers . [RUN]
+[0m13:08:57.301702 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.online_ecommerce_star_schema.stg_sessions, now model.online_ecommerce_star_schema.dim_customers)
+[0m13:08:57.303606 [debug] [Thread-5 (]: Began compiling node model.online_ecommerce_star_schema.dim_customers
+[0m13:08:57.307239 [debug] [Thread-5 (]: Writing injected SQL for node "model.online_ecommerce_star_schema.dim_customers"
+[0m13:08:57.309235 [debug] [Thread-5 (]: Timing info for model.online_ecommerce_star_schema.dim_customers (compile): 13:08:57.304246 => 13:08:57.308237
+[0m13:08:57.310231 [debug] [Thread-5 (]: Began executing node model.online_ecommerce_star_schema.dim_customers
+[0m13:08:57.324872 [debug] [Thread-5 (]: Opening a new connection, currently in state closed
+[0m13:08:58.985430 [debug] [Thread-5 (]: Writing runtime sql for node "model.online_ecommerce_star_schema.dim_customers"
+[0m13:08:58.985430 [debug] [Thread-5 (]: On model.online_ecommerce_star_schema.dim_customers: /* {"app": "dbt", "dbt_version": "1.7.18", "profile_name": "shane_bigquery_project", "target_name": "dev", "node_id": "model.online_ecommerce_star_schema.dim_customers"} */
+
+  
+    
+
+    create or replace table `evocative-depot-427007-m8`.`online_ecommerce_star_schema_marts`.`dim_customers`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      select
+        customer_id,
+        customer_name, 
+        email,
+        country,
+        age,
+        signup_date,
+        marketing_opt_in
+from `evocative-depot-427007-m8`.`online_ecommerce_star_schema_staging`.`stg_customers`
+    );
+  
+[0m13:08:59.897742 [debug] [Thread-5 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:4ac93939-0a32-401a-b076-ecd678b1032f&page=queryresults
+[0m13:09:03.702797 [debug] [Thread-5 (]: Timing info for model.online_ecommerce_star_schema.dim_customers (execute): 13:08:57.310231 => 13:09:03.702797
+[0m13:09:03.702797 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f618f867-6013-4c96-bad5-bdc7f6748f1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002077038A810>]}
+[0m13:09:03.702797 [info ] [Thread-5 (]: 8 of 11 OK created sql table model online_ecommerce_star_schema_marts.dim_customers  [[32mCREATE TABLE (20.0k rows, 1.2 MiB processed)[0m in 6.40s]
+[0m13:09:03.702797 [debug] [Thread-5 (]: Finished running node model.online_ecommerce_star_schema.dim_customers
+[0m13:09:03.702797 [debug] [Thread-5 (]: Began running node model.online_ecommerce_star_schema.dim_products
+[0m13:09:03.702797 [info ] [Thread-5 (]: 9 of 11 START sql table model online_ecommerce_star_schema_marts.dim_products .. [RUN]
+[0m13:09:03.702797 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.online_ecommerce_star_schema.dim_customers, now model.online_ecommerce_star_schema.dim_products)
+[0m13:09:03.702797 [debug] [Thread-5 (]: Began compiling node model.online_ecommerce_star_schema.dim_products
+[0m13:09:03.702797 [debug] [Thread-5 (]: Writing injected SQL for node "model.online_ecommerce_star_schema.dim_products"
+[0m13:09:03.702797 [debug] [Thread-5 (]: Timing info for model.online_ecommerce_star_schema.dim_products (compile): 13:09:03.702797 => 13:09:03.702797
+[0m13:09:03.702797 [debug] [Thread-5 (]: Began executing node model.online_ecommerce_star_schema.dim_products
+[0m13:09:03.721715 [debug] [Thread-5 (]: Opening a new connection, currently in state closed
+[0m13:09:05.450021 [debug] [Thread-5 (]: Writing runtime sql for node "model.online_ecommerce_star_schema.dim_products"
+[0m13:09:05.451023 [debug] [Thread-5 (]: On model.online_ecommerce_star_schema.dim_products: /* {"app": "dbt", "dbt_version": "1.7.18", "profile_name": "shane_bigquery_project", "target_name": "dev", "node_id": "model.online_ecommerce_star_schema.dim_products"} */
+
+  
+    
+
+    create or replace table `evocative-depot-427007-m8`.`online_ecommerce_star_schema_marts`.`dim_products`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      select
+    product_id,
+    product_name,
+    category,
+    price,
+    cost_usd,
+    margin_usd
+from `evocative-depot-427007-m8`.`online_ecommerce_star_schema_staging`.`stg_products`
+    );
+  
+[0m13:09:06.366967 [debug] [Thread-5 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:d521bb39-655f-43a5-90e3-216432a60ebb&page=queryresults
+[0m13:09:09.832157 [debug] [Thread-5 (]: Timing info for model.online_ecommerce_star_schema.dim_products (execute): 13:09:03.716427 => 13:09:09.832157
+[0m13:09:09.834154 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f618f867-6013-4c96-bad5-bdc7f6748f1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020770418D10>]}
+[0m13:09:09.835187 [info ] [Thread-5 (]: 9 of 11 OK created sql table model online_ecommerce_star_schema_marts.dim_products  [[32mCREATE TABLE (1.2k rows, 63.0 KiB processed)[0m in 6.13s]
+[0m13:09:09.837144 [debug] [Thread-5 (]: Finished running node model.online_ecommerce_star_schema.dim_products
+[0m13:09:09.838141 [debug] [Thread-5 (]: Began running node model.online_ecommerce_star_schema.fact_orders
+[0m13:09:09.839138 [info ] [Thread-5 (]: 10 of 11 START sql table model online_ecommerce_star_schema_marts.fact_orders .. [RUN]
+[0m13:09:09.839507 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.online_ecommerce_star_schema.dim_products, now model.online_ecommerce_star_schema.fact_orders)
+[0m13:09:09.840514 [debug] [Thread-5 (]: Began compiling node model.online_ecommerce_star_schema.fact_orders
+[0m13:09:09.845527 [debug] [Thread-5 (]: Writing injected SQL for node "model.online_ecommerce_star_schema.fact_orders"
+[0m13:09:09.848487 [debug] [Thread-5 (]: Timing info for model.online_ecommerce_star_schema.fact_orders (compile): 13:09:09.840514 => 13:09:09.847490
+[0m13:09:09.849484 [debug] [Thread-5 (]: Began executing node model.online_ecommerce_star_schema.fact_orders
+[0m13:09:09.852475 [debug] [Thread-5 (]: Opening a new connection, currently in state closed
+[0m13:09:11.534838 [debug] [Thread-5 (]: Writing runtime sql for node "model.online_ecommerce_star_schema.fact_orders"
+[0m13:09:11.534838 [debug] [Thread-5 (]: On model.online_ecommerce_star_schema.fact_orders: /* {"app": "dbt", "dbt_version": "1.7.18", "profile_name": "shane_bigquery_project", "target_name": "dev", "node_id": "model.online_ecommerce_star_schema.fact_orders"} */
+
+  
+    
+
+    create or replace table `evocative-depot-427007-m8`.`online_ecommerce_star_schema_marts`.`fact_orders`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+with orders as (
+    select * from `evocative-depot-427007-m8`.`online_ecommerce_star_schema_staging`.`stg_orders`
+),
+
+order_items as (
+    select * from `evocative-depot-427007-m8`.`online_ecommerce_star_schema_staging`.`stg_order_items`
+),
+
+products as (
+    select * from `evocative-depot-427007-m8`.`online_ecommerce_star_schema_staging`.`stg_products`
+)
+
+select
+    -- 1. Primary Key (Deterministic Surrogate Key via Hashing)
+    to_hex(md5(concat(oi.order_id, '_', oi.product_id))) as order_item_key,
+    
+    -- 2. Foreign Keys / Star Schema Dimensions
+    oi.order_id,
+    o.customer_id,
+    oi.product_id,
+    
+    -- 3. Temporal Attributes
+    o.order_datetime,
+    cast(o.order_datetime as date) as order_date,
+    
+    -- 4. Operational & Marketing Attributes (Degenerate Dimensions)
+    o.payment_method,
+    o.order_country,
+    o.device_type,
+    o.marketing_acquisition_source as marketing_acquisition_source,
+    
+    -- 5. Financial Facts / Calculations
+    oi.quantity,
+    oi.unit_price_usd,
+    p.cost_usd as unit_cost_usd,
+    
+    -- Gross line revenue before discounts
+    oi.line_total_usd as gross_revenue_usd,
+    
+    -- Dynamic discount impact applied per line item
+    round((oi.line_total_usd * (o.discount_pct / 100.0)), 2) as discount_amount_usd,
+    
+    -- Net revenue realized by the business
+    round(oi.line_total_usd - (oi.line_total_usd * (o.discount_pct / 100.0)), 2) as net_revenue_usd,
+    
+    -- Cost of Goods Sold (COGS)
+    round((oi.quantity * p.cost_usd), 2) as total_cogs_usd,
+    
+    -- Realized net margin profit dollars
+    round(
+        (oi.line_total_usd - (oi.line_total_usd * (o.discount_pct / 100.0))) - (oi.quantity * p.cost_usd), 
+        2
+    ) as net_profit_usd
+
+from order_items oi
+inner join orders o on oi.order_id = o.order_id
+left join products p on oi.product_id = p.product_id
+
+
+    );
+  
+[0m13:09:12.414197 [debug] [Thread-5 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:5ab3f0b4-9c38-4b91-af08-a633d8babbef&page=queryresults
+[0m13:09:18.735949 [debug] [Thread-5 (]: Timing info for model.online_ecommerce_star_schema.fact_orders (execute): 13:09:09.849484 => 13:09:18.734952
+[0m13:09:18.736947 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f618f867-6013-4c96-bad5-bdc7f6748f1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207703549E0>]}
+[0m13:09:18.737944 [info ] [Thread-5 (]: 10 of 11 OK created sql table model online_ecommerce_star_schema_marts.fact_orders  [[32mCREATE TABLE (59.2k rows, 3.6 MiB processed)[0m in 8.90s]
+[0m13:09:18.738942 [debug] [Thread-5 (]: Finished running node model.online_ecommerce_star_schema.fact_orders
+[0m13:09:18.739939 [debug] [Thread-5 (]: Began running node model.online_ecommerce_star_schema.fct_customer_sessions
+[0m13:09:18.739939 [info ] [Thread-5 (]: 11 of 11 START sql table model online_ecommerce_star_schema_marts.fct_customer_sessions  [RUN]
+[0m13:09:18.741934 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.online_ecommerce_star_schema.fact_orders, now model.online_ecommerce_star_schema.fct_customer_sessions)
+[0m13:09:18.742985 [debug] [Thread-5 (]: Began compiling node model.online_ecommerce_star_schema.fct_customer_sessions
+[0m13:09:18.746574 [debug] [Thread-5 (]: Writing injected SQL for node "model.online_ecommerce_star_schema.fct_customer_sessions"
+[0m13:09:18.747538 [debug] [Thread-5 (]: Timing info for model.online_ecommerce_star_schema.fct_customer_sessions (compile): 13:09:18.743549 => 13:09:18.747538
+[0m13:09:18.748537 [debug] [Thread-5 (]: Began executing node model.online_ecommerce_star_schema.fct_customer_sessions
+[0m13:09:18.752035 [debug] [Thread-5 (]: Opening a new connection, currently in state closed
+[0m13:09:20.720919 [debug] [Thread-5 (]: Writing runtime sql for node "model.online_ecommerce_star_schema.fct_customer_sessions"
+[0m13:09:20.720919 [debug] [Thread-5 (]: On model.online_ecommerce_star_schema.fct_customer_sessions: /* {"app": "dbt", "dbt_version": "1.7.18", "profile_name": "shane_bigquery_project", "target_name": "dev", "node_id": "model.online_ecommerce_star_schema.fct_customer_sessions"} */
+
+  
+    
+
+    create or replace table `evocative-depot-427007-m8`.`online_ecommerce_star_schema_marts`.`fct_customer_sessions`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+with events as (
+    select * from `evocative-depot-427007-m8`.`online_ecommerce_star_schema_staging`.`stg_events`
+),
+
+sessions as (
+    select * from `evocative-depot-427007-m8`.`online_ecommerce_star_schema_staging`.`stg_sessions`
+),
+
+-- Aggregate raw user event interactions down to the session grain
+session_event_aggregation as (
+    select
+        session_id,
+        
+        -- Core timeline boundaries based on click logs
+        min(event_timestamp) as activity_started_at,
+        max(event_timestamp) as activity_ended_at,
+        
+        -- Interaction volume metrics
+        count(event_id) as total_interactions,
+        count(case when event_type = 'page_view' then event_id end) as page_view_count,
+        
+        -- Dynamic e-commerce conversion funnel flags (Boolean markers)
+        max(case when event_type = 'product_view' then 1 else 0 end) as flag_viewed_product,
+        max(case when event_type = 'add_to_cart' then 1 else 0 end) as flag_added_to_cart,
+        max(case when event_type = 'checkout' then 1 else 0 end) as flag_initiated_checkout,
+        max(case when event_type = 'purchase' then 1 else 0 end) as flag_completed_purchase,
+        
+        -- Isolate financial purchase values directly from the event payload stream
+        max(case when event_type = 'purchase' then amount_usd else 0.0 end) as total_session_purchase_amount_usd
+        
+    from events
+    group by 1
+)
+
+select
+    -- 1. Unique Surrogate Primary Key
+    to_hex(md5(s.session_id)) as session_key,
+    s.session_id,
+    
+    -- 2. Star Schema Dimension References (Pulled from stg_sessions)
+    coalesce(s.customer_id, 'anonymous_guest') as customer_id,
+    cast(s.session_start_timestamp as date) as session_date,
+    
+    -- 3. Contextual Attributes / Degenerate Dimensions (Pulled from stg_sessions)
+    s.device_type,
+    s.traffic_source,
+    s.country,
+    
+    -- 4. Temporal Session Durations
+    s.session_start_timestamp as session_started_at,
+    sea.activity_ended_at,
+    timestamp_diff(sea.activity_ended_at, cast(s.session_start_timestamp as timestamp), second) as session_duration_seconds,
+    
+    -- 5. Behavior Volume Facts
+    coalesce(sea.total_interactions, 0) as total_interactions,
+    coalesce(sea.page_view_count, 0) as page_view_count,
+    
+    -- 6. Funnel Boolean Outputs
+    cast(coalesce(sea.flag_viewed_product, 0) as boolean) as has_viewed_product,
+    cast(coalesce(sea.flag_added_to_cart, 0) as boolean) as has_added_to_cart,
+    cast(coalesce(sea.flag_initiated_checkout, 0) as boolean) as has_initiated_checkout,
+    cast(coalesce(sea.flag_completed_purchase, 0) as boolean) as is_converted_purchase,
+    
+    -- 7. Revenue Metrics
+    coalesce(sea.total_session_purchase_amount_usd, 0.0) as total_session_purchase_amount_usd,
+    
+    -- 8. Advanced Drop-off & Engagement Flags
+    case 
+        when sea.flag_added_to_cart = 1 and sea.flag_completed_purchase = 0 then true 
+        else false 
+    end as is_abandoned_cart,
+    
+    case
+        when sea.total_interactions = 1 or sea.total_interactions is null then true
+        else false
+    end as is_bounced_session
+
+from sessions s
+left join session_event_aggregation sea on s.session_id = sea.session_id
+    );
+  
+[0m13:09:21.536074 [debug] [Thread-5 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=evocative-depot-427007-m8&j=bq:US:7ac04310-bca3-4f40-a3cc-d6c597acdae3&page=queryresults
+[0m13:09:35.764480 [debug] [Thread-5 (]: Timing info for model.online_ecommerce_star_schema.fct_customer_sessions (execute): 13:09:18.748537 => 13:09:35.764480
+[0m13:09:35.780008 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f618f867-6013-4c96-bad5-bdc7f6748f1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020770418D10>]}
+[0m13:09:35.780008 [info ] [Thread-5 (]: 11 of 11 OK created sql table model online_ecommerce_star_schema_marts.fct_customer_sessions  [[32mCREATE TABLE (120.0k rows, 45.6 MiB processed)[0m in 17.04s]
+[0m13:09:35.780008 [debug] [Thread-5 (]: Finished running node model.online_ecommerce_star_schema.fct_customer_sessions
+[0m13:09:35.780008 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:09:35.780008 [debug] [MainThread]: Connection 'list_evocative-depot-427007-m8' was properly closed.
+[0m13:09:35.780008 [debug] [MainThread]: Connection 'list_evocative-depot-427007-m8_online_ecommerce_star_schema_marts' was properly closed.
+[0m13:09:35.780008 [debug] [MainThread]: Connection 'model.online_ecommerce_star_schema.fct_customer_sessions' was properly closed.
+[0m13:09:35.780008 [info ] [MainThread]: 
+[0m13:09:35.780008 [info ] [MainThread]: Finished running 7 view models, 4 table models in 0 hours 1 minutes and 6.66 seconds (66.66s).
+[0m13:09:35.789252 [debug] [MainThread]: Command end result
+[0m13:09:35.811913 [info ] [MainThread]: 
+[0m13:09:35.811913 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:09:35.811913 [info ] [MainThread]: 
+[0m13:09:35.811913 [info ] [MainThread]: Done. PASS=11 WARN=0 ERROR=0 SKIP=0 TOTAL=11
+[0m13:09:35.811913 [debug] [MainThread]: Command `dbt run` succeeded at 13:09:35.811913 after 73.46 seconds
+[0m13:09:35.811913 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002075D5D7200>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002075D5D6DE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002076FF45DF0>]}
+[0m13:09:35.817267 [debug] [MainThread]: Flushing usage events

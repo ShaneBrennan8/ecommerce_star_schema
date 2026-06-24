@@ -29,7 +29,7 @@ select
     o.payment_method,
     o.order_country,
     o.device_type,
-    o.source as marketing_acquisition_source,
+    o.marketing_acquisition_source as marketing_acquisition_source,
     
     -- 5. Financial Facts / Calculations
     oi.quantity,
