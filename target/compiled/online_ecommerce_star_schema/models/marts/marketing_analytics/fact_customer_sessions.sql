@@ -1,16 +1,11 @@
-{{
-    config(
-        materialized='table',
-        unique_key='session_key'
-    )
-}}
+
 
 with events as (
-    select * from {{ ref('stg_events') }}
+    select * from `evocative-depot-427007-m8`.`online_ecommerce_star_schema_staging`.`stg_events`
 ),
 
 sessions as (
-    select * from {{ ref('stg_sessions') }}
+    select * from `evocative-depot-427007-m8`.`online_ecommerce_star_schema_staging`.`stg_sessions`
 ),
 
 -- Aggregate raw user event interactions down to the session grain
@@ -56,7 +51,7 @@ select
     -- 4. Temporal Session Durations
     s.session_start_timestamp as session_started_at,
     sea.activity_ended_at,
-    timestamp_diff(sea.activity_ended_at, cast(s.session_start_timestamp as timestamp), second) as session_duration_seconds,
+    timestamp_diff(cast (sea.activity_ended_at as timestamp), cast(s.session_start_timestamp as timestamp), second) as session_duration_seconds,
     
     -- 5. Behavior Volume Facts
     coalesce(sea.total_interactions, 0) as total_interactions,

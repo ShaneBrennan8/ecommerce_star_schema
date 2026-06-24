@@ -9,7 +9,7 @@
 select
     cast(session_id as string) as session_id,
     cast(customer_id as string) as customer_id,
-    cast(start_time as datetime) as session_start_timestamp, 
+    cast(start_time as timestamp) as session_start_timestamp,
     cast(device as string) as device_type,
     cast(source as string) as traffic_source, 
     cast(country as string) as country
